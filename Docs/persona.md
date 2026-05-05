@@ -2,7 +2,6 @@ Product vision document
 Due Session : 05 may 2026
 --------------------------------------
 Vision Statment
-
 ||
 
 Personal Wardrobe Scanning — Upload photos of your clothes; AI catalogs items by color, style, fit.
