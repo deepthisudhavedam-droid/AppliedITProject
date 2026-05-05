@@ -5,9 +5,8 @@ Product vision document
 Due Session : 05 may 2026
 --------------------------------------
 Vision Statment
-||
 
-Personal Wardrobe Scanning — Upload photos of your clothes; AI catalogs items by color, style, fit.
+||Personal Wardrobe Scanning — Upload photos of your clothes; AI catalogs items by color, style, fit.
 
 Smart Outfit Mixing — AI suggests complete looks using only your existing wardrobe pieces.
 
@@ -35,7 +34,7 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 - **Needs:** Suggestions for "refreshing" old items and tracking "cost-per-wear."
 - **Pain Points:** Feeling like they have nothing to wear despite a full closet; guilt about buying new.
 
-### Persona 3: Jordan Lee - The Aspiring Style Influencer
+### Persona 3: Jordan Lee - The Aspiring Style Influencer 
 - **Background:** 21-year-old Fashion Student.
 - **Skills:** Social media expert, early adopter of new creative tools.
 - **Motivation:** Creating unique "looks" for content creation on a budget.
