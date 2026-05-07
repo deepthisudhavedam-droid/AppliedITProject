@@ -46,11 +46,11 @@ Pain Points: Stress while choosing outfits under time pressure; uncertainty abou
 ## Part 2: Scenarios
 
 ### Scenario 1: Maya's Rainy Workday
-- **Actor:** Maya Chen.
-- **Goal:** Find a professional outfit suitable for a rainy commute and an important meeting.
-- **Setting:** Her bedroom, 7:30 AM, raining outside.
-- **Action:** Maya opens the app; it detects the local weather and filters her wardrobe for "Rainproof" and "Business Casual" tags.
-- **Outcome:** She selects a suggested trench coat and waterproof boot combo in seconds, arriving at work on time and dry.
+- Maya wakes up at 7:15 AM in her Berlin apartment. She has a client presentation at 9:00 AM, and the weather forecast shows unexpected rain and a temperature drop. Standing in front of her overflowing wardrobe, she feels the familiar frustration — too many clothes, no time to think.
+
+She opens your AI Fashion Stylist App, uploads a quick mirror photo, and instantly receives a curated outfit combination from her existing wardrobe that matches her skin tone, the rainy weather, and the formal occasion.
+
+For the first time in weeks, she leaves home without second‑guessing her outfit.
 
 ### Scenario 2: Alex's Weekend Upcycling
 - **Actor:** Alex Rivera.
@@ -59,12 +59,12 @@ Pain Points: Stress while choosing outfits under time pressure; uncertainty abou
 - **Action:** Alex uses the "Refresh" feature, inputting the denim jacket. The AI suggests pairing it with a vintage scarf and black trousers from their inventory.
 - **Outcome:** Alex feels confident in a "new" look without spending money or resources on new clothes.
 
-### Scenario 3: Sara khan - proffessional make over
-Actor: Sara Khan
-Goal: Find a professional yet comfortable outfit for her first internship interview.
-Setting: Hostel room, 7:00 AM, nervous before interview day.
-Action: Sara uses the app’s “Formal” and “Minimal Style” filters for recommendations.
-Outcome: She confidently wears a blazer-trouser combination and makes a great first impression.
+### Scenario 3: Jordan's "Niche Aesthetic" Challenge
+- **Actor:** Jordan Lee.
+- **Goal:** Create a "Cyber-Core" outfit for an Instagram reel.
+- **Setting:** Studio apartment with clothes scattered around.
+- **Action:** Jordan toggles the "Experimental Mode" and selects "Cyber-Core." The AI pulls contrasting neon pieces and metallic accessories Jordan rarely pairs together.
+- **Outcome:** Jordan captures a viral-ready look that pushes their creative boundaries.
 
 ---
 
