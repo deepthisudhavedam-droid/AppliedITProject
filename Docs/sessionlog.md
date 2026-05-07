@@ -16,7 +16,12 @@
 I have created github account and installed VS Code. I linked github to the vs code and connected to a Repository and created a branch in the  github.
 
 05/05/2026
-Today i have created a persona. Alex Rivera - The Eco-Conscious Minimalist Background: 24-year-old Graduate Student and environmental activist.  Motivation: Extend the lifecycle of existing garments;  Pain Points: Feeling like they have nothing to wear despite a full closet; guilt about buying new.
+Vinay Kumar
+ I have created a persona. Alex Rivera - The Eco-Conscious Minimalist Background: 24-year-old Graduate Student and environmental activist.  Motivation: Extend the lifecycle of existing garments;  Pain Points: Feeling like they have nothing to wear despite a full closet; guilt about buying new.
+
+07/05/2026
+Vinay Kumar
+I have created created user stories and conducted scrum meeting with team, Gone through various team to discuss about their topics and personas. i have swaped our scenario with with group N and group E and we shared our project.
 
 ## ****Sainath Reddy****
 
@@ -28,10 +33,5 @@ I have also added the .gitignore file to exclude the Docs folder from the reposi
 Today I have been working on a range of changes across the project.
 - Enhanced Product Vision Document: Expanded this document to include an AI Style Coach to help users style and discover new looks.
 - Added User Persona: Defined "Maya Chen" as the primary user—a busy professional who needs quick, weather-appropriate outfit suggestions.
-
- 07-05-2026
- Today, I have been working on GitHub by cleaning all the branches and editing the personas and user stories with scenarios in the repository.
- - We have conducted a scrum meeting with our group and swapped ideas with other groups, took the suggestions, and discussed with our groups
- - We have completed the deliverable checklist.
 
 ## ****Rakshitha****
