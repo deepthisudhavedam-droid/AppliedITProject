@@ -1,9 +1,5 @@
 # AI Stylist Project Deliverables
 
-
-Product vision document
-Due Session : 05 may 2026
---------------------------------------
 Vision Statment
 
 ||
