@@ -1,7 +1,6 @@
-# AI FASHION STYLIST
+# AI FASHION STYLIST RECOMMANDATION
 
 We want to design a fashion stylist which help to develop the dressing skills from our own wardrobe. When we give the pictures of the clothing it will suggest which would be good.
-> One-sentence description of what this project does and who it is for.
 
 ## Team
 

@@ -1,5 +1,6 @@
 # AI Stylist Project Deliverables
 
+
 ## Part 1: Proto-personas
 
 ### Persona 1: Maya Chen - The Busy Urban Professional
