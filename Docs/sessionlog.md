@@ -27,4 +27,5 @@ Today i have created a persona. Alex Rivera - The Eco-Conscious Minimalist Backg
 
 05-05-2026 - created personas and senarios
 
-07-05-2026 - created user stories and conducted scrum meeting with team
+07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their topics and personas
+
