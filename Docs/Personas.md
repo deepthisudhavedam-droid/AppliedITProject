@@ -12,7 +12,7 @@ Smart Outfit Mixing — AI suggests complete looks using only your existing ward
 
 Occasion Matching — Input event type (work, party); get tailored combos instantly.
 
-Virtual Try-On — Preview outfits on your body for perfect styling.
+Teparature varient - weather related outfits
 
 Sustainability Focus — Zero new buys — maximize what you own, reduce waste. 
 
@@ -83,13 +83,13 @@ Outcome: She confidently wears a blazer-trouser combination and makes a great fi
 
 ## Part 4: Feature List
 
-1. **AI Wardrobe Digitization:** Automatically categorize clothes from photos. (Source: Persona 1 - Maya)
-2. **Smart Weather Sync:** Adjust suggestions based on real-time local forecast. (Source: Scenario 1)
-3. **Sustainability Tracker:** Tracks "Cost-per-wear" and item usage frequency. (Source: Persona 2 - Alex)
-4. **Style Mode Toggles:** Options for "Safe/Classic" vs "Experimental/Bold." (Source: Persona 3 - Jordan)
-5. **Outfit Calendar:** Plan looks for the week ahead. (Source: Scenario 1)
-6. **"Refresh" Prompt:** Suggestions for items not worn in 30+ days. (Source: Scenario 2)
-7. **Virtual Try-on (V1):** Simple overlay of items to visualize the look. (Source: Competitive Analysis/User Needs)
+1. AI Wardrobe Digitization: Automatically categorize clothes from photos. (Source: Persona 1 - Maya)
+2. Smart Weather Sync: Adjust suggestions based on real-time local forecast. (Source: Scenario 1)
+3. Sustainability Tracker: Tracks "Cost-per-wear" and item usage frequency. (Source: Persona 2 - Alex)
+4. Formal Style Recommendations: Suggest interview-ready and presentation-friendly outfits. (Source: Persona 3 - Sara)
+5. Outfit Calendar: Plan looks for the week ahead. (Source: Scenario 1)
+6. "Refresh" Prompt: Suggestions for items not worn in 30+ days. (Source: Scenario 2)
+7.Virtual Try-on (V1): Simple overlay of items to visualize the look. (Source: Competitive Analysis/User Needs)
 
 ---
 
