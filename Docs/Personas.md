@@ -99,6 +99,7 @@ Outcome: She confidently wears a blazer-trouser combination and makes a great fi
 -- As a user unsure about formal pairing, I want help matching tops, bottoms, and layers so I can create polished looks easily.
 
 -- As someone preparing for presentations and internships, I want wardrobe suggestions using existing pieces so I can dress appropriately without buying too much
+
 ---
 
 ## Part 4: Feature List
