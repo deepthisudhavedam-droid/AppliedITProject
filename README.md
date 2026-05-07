@@ -7,8 +7,8 @@ We want to design a fashion stylist which help to develop the dressing skills fr
 
 | Role | Name |
 |---|---|
-| Product Owner | Sainath Reddy Madhire |
-| Scrum Master |Vinay kumar Komaraboina |
+| Product Owner | Deepthi sudha Vedam |
+| Scrum Master |Sainath Madhire |
 | Developer |Deepthi sudha Vedam |
 | Developer |Rakshitha BoddU |
 | Developer |Jhanhavi Veerabhadraswamy |
