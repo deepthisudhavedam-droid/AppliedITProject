@@ -35,11 +35,11 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 - **Pain Points:** Feeling like they have nothing to wear despite a full closet; guilt about buying new.
 
 ### Persona 3: Sara Khan – The Ambitious Professional
-- **Background: **21-year-old final-year college student preparing for internships and corporate interviews.
-- **Skills: **Comfortable using fashion, productivity, and scheduling apps for daily planning.
-- **Motivation: **Build a confident and professional image while maintaining comfort and simplicity.
-- **Needs: **Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
-- **Pain Points: **Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
+- **Background:**21-year-old final-year college student preparing for internships and corporate interviews.
+- **Skills:**Comfortable using fashion, productivity, and scheduling apps for daily planning.
+- **Motivation:**Build a confident and professional image while maintaining comfort and simplicity.
+- **Needs:**Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
+- **Pain Points:**Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
 
 ---
 
@@ -54,12 +54,11 @@ For the first time in weeks, she leaves home without second‑guessing her outfi
 
 ### Scenario 2: Alex's Weekend Upcycling
 On a Saturday afternoon in their home office, Alex Rivera used the “Refresh” feature to style a forgotten denim jacket for a friend’s birthday. After uploading the jacket, the AI suggested pairing it with a vintage scarf and black trousers already available in their wardrobe. The result was a stylish new outfit that made Alex feel confident without spending money on new clothes or creating additional waste.
-### Scenario 3: Jordan's "Niche Aesthetic" Challenge
-- **Actor:** Jordan Lee.
-- **Goal:** Create a "Cyber-Core" outfit for an Instagram reel.
-- **Setting:** Studio apartment with clothes scattered around.
-- **Action:** Jordan toggles the "Experimental Mode" and selects "Cyber-Core." The AI pulls contrasting neon pieces and metallic accessories Jordan rarely pairs together.
-- **Outcome:** Jordan captures a viral-ready look that pushes their creative boundaries.
+### Scenario 3: Actor: Sara Khan
+Goal: Find a professional yet comfortable outfit for her first internship interview.
+Setting: Hostel room, 7:00 AM, nervous before interview day.
+Action: Sara uses the app’s “Formal” and “Minimal Style” filters for recommendations.
+Outcome: She confidently wears a blazer-trouser combination and makes a great first impression.
 
 ---
 
