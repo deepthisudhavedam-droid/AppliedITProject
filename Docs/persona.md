@@ -13,3 +13,9 @@ Goal: Find a professional outfit suitable for a rainy commute and an important m
 Setting: Her bedroom, 7:30 AM, raining outside.
 Action: Maya opens the app; it detects the local weather and filters her wardrobe for "Rainproof" and "Business Casual" tags.
 Outcome: She selects a suggested trench coat and waterproof boot combo in seconds, arriving at work on time and dry.
+Alex Rivera - The Eco-Conscious Minimalist
+Background: 24-year-old Graduate Student and environmental activist.
+Skills: Moderate tech-savvy, uses sustainability apps.
+Motivation: Extend the lifecycle of existing garments; avoid fast fashion.
+Needs: Suggestions for "refreshing" old items and tracking "cost-per-wear."
+Pain Points: Feeling like they have nothing to wear despite a full closet; guilt about buying new.
