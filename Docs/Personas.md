@@ -35,11 +35,11 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 - **Pain Points:** Feeling like they have nothing to wear despite a full closet; guilt about buying new.
 
 ### Persona 3: Sara Khan – The Ambitious Professional
-- **Background:**21-year-old final-year college student preparing for internships and corporate interviews.
-- **Skills:**Comfortable using fashion, productivity, and scheduling apps for daily planning.
-- **Motivation:**Build a confident and professional image while maintaining comfort and simplicity.
-- **Needs:**Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
-- **Pain Points:**Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
+- **Background:** 21-year-old final-year college student preparing for internships and corporate interviews.
+- **Skills:** Comfortable using fashion, productivity, and scheduling apps for daily planning.
+- **Motivation:** Build a confident and professional image while maintaining comfort and simplicity.
+- **Needs:** Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
+- **Pain Points:** Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
 
 ---
 
