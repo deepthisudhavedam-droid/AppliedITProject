@@ -64,15 +64,38 @@ Outcome: She confidently wears a blazer-trouser combination and makes a great fi
 
 ## Part 3: User Stories
 
-### Epic: Wardrobe Management
-1. **As a** user, **I want to** upload photos of my clothes **so that** the AI can recognize and categorize them.
-2. **As a** user, **I want to** tag items with attributes like "formal" or "summer" **so that** I can filter them easily.
+- Maya Chen — Busy Urban Professional
+As a busy marketing manager, I want quick outfit suggestions from my existing wardrobe so I can get ready faster in the morning.
 
-### Epic: AI Recommendations (Broken Down)
-1. **As a** busy professional, **I want to** receive outfit suggestions based on the daily weather **so that** I don't have to check multiple apps.
-2. **As a** sustainability advocate, **I want to** see which items I haven't worn in a while **so that** I can prioritize using them.
-3. **As a** fashion student, **I want** the AI to suggest "bold" combinations **so that** I can experiment with new styles.
+As a working professional, I want weather-appropriate outfit recommendations so I can dress comfortably and confidently each day.
 
+As someone with too many clothes, I want help visualizing new combinations so I can stop wasting time deciding what to wear.
+
+As a tech-savvy user, I want to save favorite outfits for repeat use so I can simplify future outfit decisions.
+
+As a professional with limited time, I want polished outfit plans for workdays so I can stay consistent without overthinking.
+
+- Alex Rivera — Eco-Conscious Minimalist
+As an eco-conscious graduate student, I want styling ideas that refresh old clothes so I can keep wearing what I own.
+
+As someone who avoids fast fashion, I want outfits built from existing garments so I can reduce unnecessary purchases.
+
+As a sustainability-minded user, I want to track cost-per-wear so I can better understand the value of my wardrobe.
+
+As a minimalist, I want suggestions for mixing and matching fewer items so I can make my closet feel more versatile.
+
+As someone who feels guilty about buying new clothes, I want inspiration from my current wardrobe so I can feel confident without shopping.
+
+- Sara Khan — Ambitious Professional
+As a final-year engineering student, I want quick outfit ideas for interviews so I can look professional with less stress.
+
+As a student balancing internships and classes, I want easy daily outfit planning so I can save time on busy mornings.
+
+As someone with limited hostel space, I want to organize my wardrobe into outfit options so I can manage clothes more efficiently.
+
+As a user unsure about formal pairing, I want help matching tops, bottoms, and layers so I can create polished looks easily.
+
+As someone preparing for presentations and internships, I want wardrobe suggestions using existing pieces so I can dress appropriately without buying too much
 ---
 
 ## Part 4: Feature List
