@@ -48,9 +48,7 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 ## Part 2: Scenarios
 
 ### Scenario 1: Maya's Rainy Workday
-- Maya wakes up at 7:15 AM in her Berlin apartment. She has a client presentation at 9:00 AM, and the weather forecast shows unexpected rain and a temperature drop. Standing in front of her overflowing wardrobe, she feels the familiar frustration — too many clothes, no time to think.
-
-She opens your AI Fashion Stylist App, uploads a quick mirror photo, and instantly receives a curated outfit combination from her existing wardrobe that matches her skin tone, the rainy weather, and the formal occasion.
+Maya wakes up at 7:15 AM in her Berlin apartment. She has a client presentation at 9:00 AM, and the weather forecast shows unexpected rain and a temperature drop. Standing in front of her overflowing wardrobe, she feels the familiar frustration — too many clothes, no time to think. She opens your AI Fashion Stylist App, uploads a quick mirror photo, and instantly receives a curated outfit combination from her existing wardrobe that matches her skin tone, the rainy weather, and the formal occasion.
 
 For the first time in weeks, she leaves home without second‑guessing her outfit.
 
