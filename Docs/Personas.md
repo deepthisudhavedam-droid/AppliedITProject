@@ -53,12 +53,7 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 - **Outcome:** She selects a suggested trench coat and waterproof boot combo in seconds, arriving at work on time and dry.
 
 ### Scenario 2: Alex's Weekend Upcycling
-- **Actor:** Alex Rivera.
-- **Goal:** Style a "forgotten" denim jacket for a friend's birthday.
-- **Setting:** Home office, Saturday afternoon.
-- **Action:** Alex uses the "Refresh" feature, inputting the denim jacket. The AI suggests pairing it with a vintage scarf and black trousers from their inventory.
-- **Outcome:** Alex feels confident in a "new" look without spending money or resources on new clothes.
-
+On a Saturday afternoon in their home office, Alex Rivera used the “Refresh” feature to style a forgotten denim jacket for a friend’s birthday. After uploading the jacket, the AI suggested pairing it with a vintage scarf and black trousers already available in their wardrobe. The result was a stylish new outfit that made Alex feel confident without spending money on new clothes or creating additional waste.
 ### Scenario 3: Jordan's "Niche Aesthetic" Challenge
 - **Actor:** Jordan Lee.
 - **Goal:** Create a "Cyber-Core" outfit for an Instagram reel.
