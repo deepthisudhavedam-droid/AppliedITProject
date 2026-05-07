@@ -1,5 +1,9 @@
 # AI Stylist Project Deliverables
 
+
+Product vision document
+Due Session : 05 may 2026
+--------------------------------------
 Vision Statment
 
 ||
@@ -53,8 +57,12 @@ On a Saturday afternoon in their home office, Alex Rivera used the “Refresh”
 ### Scenario 3: Actor: Sara Khan
 Goal: Find a professional yet comfortable outfit for her first internship interview.
 Setting: Hostel room, 7:00 AM, nervous before interview day.
-Action: Sara uses the app’s “Formal” and “Minimal Style” filters for recommendations.
-Outcome: She confidently wears a blazer-trouser combination and makes a great first impression.
+Action:
+Sara opens the app and selects the “Formal” and “Minimal Style” filters. The AI first scans her wardrobe and identifies a light beige blazer, black high-waist trousers, and a white cotton shirt. It then suggests two complete combinations—one with loafers for comfort and another with low heels for a more formal look.
+
+The app also checks the weather and recommends carrying a light neutral cardigan in case the AC is cold during the interview. Sara uses the virtual try-on feature to quickly preview both outfits and compares how each look fits her interview setting. She saves the final outfit and sets a reminder to get ready 30 minutes early.
+Outcome:
+Sara confidently wears the blazer-trouser combination with minimal accessories, feeling comfortable and professional. She walks into her interview composed and prepared, making a strong and positive first impression.
 
 ---
 
