@@ -17,7 +17,7 @@ I have created github account and installed VS Code. I linked github to the vs c
 05/05/2026
 Today i have created a persona. Alex Rivera - The Eco-Conscious Minimalist Background: 24-year-old Graduate Student and environmental activist.  Motivation: Extend the lifecycle of existing garments;  Pain Points: Feeling like they have nothing to wear despite a full closet; guilt about buying new.
 
-## ***Deepthi Sudha*** 
+## ****Deepthi Sudha****
 
 23-0402026 - decided about the project and made groups of 5 members
 
@@ -27,5 +27,5 @@ Today i have created a persona. Alex Rivera - The Eco-Conscious Minimalist Backg
 
 05-05-2026 - created personas and senarios
 
-07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their topics and personas
+07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their      topics and personas
 
