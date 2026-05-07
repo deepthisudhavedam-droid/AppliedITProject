@@ -24,18 +24,7 @@
 - **Needs:** Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
 - **Pain Points:** Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
 
----
 
-## Part 4: Feature List
-
-1. AI Wardrobe Digitization: Automatically categorize clothes from photos. (Source: Persona 1 - Maya)
-2. Smart Weather Sync: Adjust suggestions based on real-time local forecast. (Source: Scenario 1)
-3. Sustainability Tracker: Tracks "Cost-per-wear" and item usage frequency. (Source: Persona 2 - Alex)
-4. Formal Style Recommendations: Suggest interview-ready and presentation-friendly outfits. (Source: Persona 3 - Sara)
-5. Outfit Calendar: Plan looks for the week ahead. (Source: Scenario 1)
-6. "Refresh" Prompt: Suggestions for items not worn in 30+ days. (Source: Scenario 2)
-
----
 
 ## Part 5: Key Trade-offs Debated
 

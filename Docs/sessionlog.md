@@ -1,6 +1,6 @@
 ## ****Deepthi Sudha****
 
-23-0402026 - decided about the project and made groups of 5 members
+23-04-2026 - decided about the project and made groups of 5 members
 
 28-04-2026 - created branches through gits hub
 
