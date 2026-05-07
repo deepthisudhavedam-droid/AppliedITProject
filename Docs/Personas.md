@@ -6,7 +6,9 @@ Due Session : 05 may 2026
 --------------------------------------
 Vision Statment
 
-||Personal Wardrobe Scanning — Upload photos of your clothes; AI catalogs items by color, style, fit.
+||
+
+Personal Wardrobe Scanning — Upload photos of your clothes; AI catalogs items by color, style, fit.
 
 Smart Outfit Mixing — AI suggests complete looks using only your existing wardrobe pieces.
 
