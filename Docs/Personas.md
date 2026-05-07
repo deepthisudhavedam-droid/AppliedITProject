@@ -106,7 +106,6 @@ As someone preparing for presentations and internships, I want wardrobe suggesti
 4. Formal Style Recommendations: Suggest interview-ready and presentation-friendly outfits. (Source: Persona 3 - Sara)
 5. Outfit Calendar: Plan looks for the week ahead. (Source: Scenario 1)
 6. "Refresh" Prompt: Suggestions for items not worn in 30+ days. (Source: Scenario 2)
-7.Virtual Try-on (V1): Simple overlay of items to visualize the look. (Source: Competitive Analysis/User Needs)
 
 ---
 
