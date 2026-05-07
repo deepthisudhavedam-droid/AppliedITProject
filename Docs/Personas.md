@@ -46,11 +46,11 @@ Sustainability Focus — Zero new buys — maximize what you own, reduce waste.
 ## Part 2: Scenarios
 
 ### Scenario 1: Maya's Rainy Workday
-- **Actor:** Maya Chen.
-- **Goal:** Find a professional outfit suitable for a rainy commute and an important meeting.
-- **Setting:** Her bedroom, 7:30 AM, raining outside.
-- **Action:** Maya opens the app; it detects the local weather and filters her wardrobe for "Rainproof" and "Business Casual" tags.
-- **Outcome:** She selects a suggested trench coat and waterproof boot combo in seconds, arriving at work on time and dry.
+- Maya wakes up at 7:15 AM in her Berlin apartment. She has a client presentation at 9:00 AM, and the weather forecast shows unexpected rain and a temperature drop. Standing in front of her overflowing wardrobe, she feels the familiar frustration — too many clothes, no time to think.
+
+She opens your AI Fashion Stylist App, uploads a quick mirror photo, and instantly receives a curated outfit combination from her existing wardrobe that matches her skin tone, the rainy weather, and the formal occasion.
+
+For the first time in weeks, she leaves home without second‑guessing her outfit.
 
 ### Scenario 2: Alex's Weekend Upcycling
 - **Actor:** Alex Rivera.
