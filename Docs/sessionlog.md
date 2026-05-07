@@ -21,7 +21,11 @@ Deepthi Sudha
 
 
 23-0402026 - decided about the project and made groups of 5 members
+
 28-04-2026 - created branches through gits hub
+
 30-04-2026 - created a vision document and created branches
+
 05-05-2026 - created personas and senarios
+
 07-05-2026 - created user stories and conducted scrum meeting with team
