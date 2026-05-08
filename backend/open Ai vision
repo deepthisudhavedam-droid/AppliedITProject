@@ -1,0 +1,22 @@
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+async def extract_metadata_with_openai(image_path: str):
+    with open(image_path, "rb") as img:
+        resp = openai.ChatCompletion.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text",
+                         "text": "Analyze this clothing item and return JSON with keys: type, color, pattern, style, fabric."},
+                        {"type": "image_url",
+                         "image_url": {"url": "data:image/jpeg;base64," + base64_string_here}}
+                    ]
+                }
+            ]
+        )
+    # parse resp.choices[0].message.content as JSON
+    # return dict with type, color, pattern, style, fabric
