@@ -1,0 +1,58 @@
+from itertools import product
+
+def recommend_outfits(wardrobe_items, constraints):
+    tops = [i for i in wardrobe_items if i["type"] in ["shirt", "tshirt", "kurta"]]
+    bottoms = [i for i in wardrobe_items if i["type"] in ["jeans", "trousers", "chinos"]]
+    shoes = [i for i in wardrobe_items if i["type"] in ["shoes", "sneakers"]]
+
+    outfits = []
+    for top, bottom, shoe in product(tops, bottoms, shoes):
+        score, reason = score_outfit(top, bottom, shoe, constraints)
+        if score > 0:
+            outfits.append({"top": top, "bottom": bottom, "shoe": shoe, "score": score, "reason": reason})
+
+    outfits.sort(key=lambda x: x["score"], reverse=True)
+    return outfits[:3]
+
+def score_outfit(top, bottom, shoe, constraints):
+    score = 0
+    reasons = []
+
+    # style
+    if top["style"] in constraints["styles"] and bottom["style"] in constraints["styles"]:
+        score += 2
+        reasons.append("Matches occasion style")
+
+    # fabric (if present)
+    if top.get("fabric") in constraints["fabrics"]:
+        score += 1
+    if bottom.get("fabric") in constraints["fabrics"]:
+        score += 1
+
+    # color
+    allowed_bottom_colors = constraints["color_pairs"](top["color"])
+    if bottom["color"] in allowed_bottom_colors:
+        score += 2
+        reasons.append("Good color contrast")
+
+    return score, ", ".join(reasons) if reasons else "Basic match"
+
+
+from rules import build_constraints
+from recommendation import recommend_outfits
+import requests
+
+@app.post("/recommend-outfit")
+def recommend(user_id: str, occasion: str, city: str):
+    # 1. get weather
+    weather_type = get_weather_type(city)
+
+    # 2. constraints
+    constraints = build_constraints(occasion, weather_type)
+
+    # 3. wardrobe
+    items = list(wardrobe.find({"user_id": user_id}, {"_id": 0}))
+
+    # 4. recommend
+    outfits = recommend_outfits(items, constraints)
+    return {"outfits": outfits, "weather_type": weather_type}

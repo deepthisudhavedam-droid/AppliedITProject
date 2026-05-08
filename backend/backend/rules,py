@@ -1,0 +1,34 @@
+def map_weather(temp_c: float, condition: str):
+    if temp_c < 10:
+        return "cold"
+    if temp_c > 25:
+        return "hot"
+    return "mild"
+
+def allowed_styles(occasion: str):
+    if occasion in ["office", "interview"]:
+        return ["formal", "semi-formal"]
+    if occasion == "party":
+        return ["casual", "semi-formal"]
+    return ["casual"]
+
+def allowed_fabrics(weather_type: str):
+    if weather_type == "hot":
+        return ["cotton", "linen"]
+    if weather_type == "cold":
+        return ["wool", "denim", "polyester"]
+    return ["cotton", "denim"]
+
+def color_pairs(top_color: str):
+    # simple mapping
+    return {
+        "white": ["black", "navy", "grey"],
+        "black": ["blue", "olive", "beige"],
+    }.get(top_color, ["black", "blue", "grey"])
+
+def build_constraints(occasion: str, weather_type: str):
+    return {
+        "styles": allowed_styles(occasion),
+        "fabrics": allowed_fabrics(weather_type),
+        "color_pairs": color_pairs
+    }

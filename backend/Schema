@@ -1,0 +1,15 @@
+{
+  "user_id": "u1",
+  "type": "shirt",
+  "color": "white",
+  "pattern": "solid",
+  "style": "formal",
+  "fabric": "cotton",
+  "image_path": "images/u1_shirt1.jpg",
+  "created_at": "..."
+}
+
+@app.get("/wardrobe/{user_id}")
+def get_wardrobe(user_id: str):
+    items = list(wardrobe.find({"user_id": user_id}, {"_id": 0}))
+    return {"items": items}
