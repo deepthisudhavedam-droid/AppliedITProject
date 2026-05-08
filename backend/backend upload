@@ -1,0 +1,28 @@
+from fastapi import FastAPI, UploadFile, File, Form
+from pymongo import MongoClient
+import os
+
+app = FastAPI()
+client = MongoClient(os.getenv("MONGO_URI"))
+db = client["fashion_stylist"]
+wardrobe = db["wardrobe_items"]
+
+@app.post("/upload-item")
+async def upload_item(user_id: str = Form(...), file: UploadFile = File(...)):
+    # 1. Save file locally or to cloud
+    contents = await file.read()
+    file_path = f"images/{user_id}_{file.filename}"
+    with open(file_path, "wb") as f:
+        f.write(contents)
+
+    # 2. Call OpenAI Vision
+    metadata = await extract_metadata_with_openai(file_path)
+
+    # 3. Store in MongoDB
+    item = {
+        "user_id": user_id,
+        **metadata,
+        "image_path": file_path
+    }
+    wardrobe.insert_one(item)
+    return {"status": "ok", "item": item}
