@@ -37,12 +37,15 @@ Today I have been working on a range of changes across the project.
 ## ****Rakshitha****
 
 28-04-2026
+
 Today i have created a branch and pushed the code to the main.
 I have also added the .gitignore file to exclude the Docs folder from the repository.
 
 05-05-2026
+
 I was Absent in class
 
 07-05-2026
+
 I have created user stories and participated in Scrum meetings with the team. I also interacted with different teams to discuss their topics and personas.
 Additionally, I exchanged our project scenario with Group N, where we shared our project ideas and updates.I discussed our progress with Group N, and they provided their feedback and updates as well.
