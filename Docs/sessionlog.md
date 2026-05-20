@@ -23,6 +23,11 @@ Vinay Kumar
 Vinay Kumar
 I have created user stories and conducted scrum meeting with team, Gone through various team to discuss about their topics and personas. i have swaped our scenario with with group N and group E and we shared our project.
 
+19/05/2026
+Vinay Kumar
+I have created virtualbox and installed linux OS in the virtual box. then i have connected linux OS to filezilla
+by using SSH protocol. comleted SCP 
+
 ## ****Sainath Reddy****
 
 28-04-2026
