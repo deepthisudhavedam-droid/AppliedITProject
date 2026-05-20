@@ -54,3 +54,22 @@ I was Absent in class
 
 I have created user stories and participated in Scrum meetings with the team. I also interacted with different teams to discuss their topics and personas.
 Additionally, I exchanged our project scenario with Group N, where we shared our project ideas and updates.I discussed our progress with Group N, and they provided their feedback and updates as well.
+
+
+## ****Pallavi****
+
+28-04-2026
+
+I hadn't arrived at the university yet.
+
+05-05-2026
+
+I hadn't arrived at the university yet.
+
+07-05-2026
+
+I hadn't arrived at the university yet.
+
+19-05-2026
+
+This is my first class. I've joined in the Group D, I've Installed VirtualBox and needed Resources for project, Installed Linux Operating System, and configured ssh, ftp, scp.
