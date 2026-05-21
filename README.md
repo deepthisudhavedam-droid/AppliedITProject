@@ -11,7 +11,7 @@ An AI fashion stylist recommendation should help users get personalized outfit i
 | Scrum Master |Sainath Madhire |
 | Developer |Vinay Kumar Komaraboina |
 | Developer |Rakshitha BoddU |
-| Developer |Pallavi |
+| Developer |Pallavi Moulukapuri|
 | Developer |Jhanhavi Veerabhadraswamy |
 
 ## Project Overview
