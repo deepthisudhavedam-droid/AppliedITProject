@@ -25,8 +25,7 @@
 - **Pain Points:** Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
 
 
-
-## Part 5: Key Trade-offs Debated
+## Key Trade-offs Debated
 
 **Manual vs. Automatic Tagging:**
 The group debated whether to allow users to manually tag every item or rely 100% on AI image recognition.
@@ -36,7 +35,7 @@ The group debated whether to allow users to manually tag every item or rely 100%
 
 ---
 
-## Part 6: Individual Written Reflections
+## Individual Written Reflections
 
 **Question 1: How did the personas influence your design choices?**
 *Answer:* The personas acted as a "north star." For example, we initially didn't prioritize weather integration, but after creating "Maya," it became clear that her primary pain point was morning efficiency, which is heavily dictated by the weather.
