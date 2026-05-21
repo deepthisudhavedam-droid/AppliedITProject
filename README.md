@@ -72,6 +72,7 @@ The app will be available at `http://localhost:3000`.
 ## Documentation
 
 - [Vision Document](docs/vision.md)
+- [Persona](docs/Personas.md)
 
 
 ## License
