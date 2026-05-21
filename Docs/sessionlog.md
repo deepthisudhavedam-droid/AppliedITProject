@@ -127,7 +127,8 @@ Today I have been working on a range of changes across the project.
 * Installed a Linux operating system for the development environment.
 * Configured essential networking and file transfer services, including **SSH, FTP, and SCP**.
 
-
+## **21-05-2026**
+* Installed Docker and Docker compose and tried all the commands. *
 
 ## ****Jhanvi****
 
