@@ -12,7 +12,7 @@
 
 12-05-2026 - installed VM & linux
 
-
+19-05-2026 - configured ftp with FileZilla, scp. installed NGINX, and deploid static website in NGINX website
 
 ## ****Vinay Kumar****
 
