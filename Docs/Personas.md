@@ -1,6 +1,6 @@
 # AI Stylist Project Deliverables
 
-## Part 1: Proto-personas
+## Proto-personas
 
 ### Persona 1: Maya Chen - The Busy Urban Professional
 - **Background:** 28-year-old Marketing Manager.
