@@ -1,6 +1,5 @@
 # AI Stylist Project Deliverables
 
-
 ## Part 1: Proto-personas
 
 ### Persona 1: Maya Chen - The Busy Urban Professional
@@ -23,22 +22,3 @@
 - **Motivation:** Build a confident and professional image while maintaining comfort and simplicity.
 - **Needs:** Quick outfit recommendations for formal events, interview-ready combinations, and minimal styling guidance.
 - **Pain Points:** Stress while choosing outfits under time pressure; uncertainty about professional dress codes; limited wardrobe options in hostel life.
-
-
-## Key Trade-offs Debated
-
-**Manual vs. Automatic Tagging:**
-The group debated whether to allow users to manually tag every item or rely 100% on AI image recognition.
-- **Pros of AI:** Faster, better user experience for Maya (busy professional).
-- **Pros of Manual:** More accurate for niche styles (Jordan).
-- **Decision:** We chose a **Hybrid Model**. The AI provides "Best Guess" tags which the user can quickly confirm or edit. This balances speed with accuracy.
-
----
-
-## Individual Written Reflections
-
-**Question 1: How did the personas influence your design choices?**
-*Answer:* The personas acted as a "north star." For example, we initially didn't prioritize weather integration, but after creating "Maya," it became clear that her primary pain point was morning efficiency, which is heavily dictated by the weather.
-
-**Question 2: What was the most challenging part of deriving user stories from scenarios?**
-*Answer:* The challenge was ensuring the stories were "atomic" and didn't overlap too much. We had to break down the "Recommendation" epic into specific stories for weather, style preference, and usage frequency to make them actionable for development.
