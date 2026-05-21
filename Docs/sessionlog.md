@@ -14,6 +14,8 @@
 
 19-05-2026 - configured ftp with FileZilla, scp. installed NGINX, and deploid static website in NGINX website
 
+21-05-2026 - 
+
 ## ****Vinay Kumar****
 
 28/04/2026
