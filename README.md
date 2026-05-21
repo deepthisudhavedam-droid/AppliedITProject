@@ -16,7 +16,7 @@ An AI fashion stylist recommendation should help users get personalized outfit i
 
 ## Project Overview
 
-_Brief description of the problem you are solving, your target users, and the core value your product delivers._
+The goal of this project is to make styling easier, faster, and more personalized. Instead of searching manually for shoes, bags, jewelry, or clothing that match a photo, users get AI-generated recommendations in seconds. This can help shoppers discover coordinated outfits, improve their personal style, and make more confident fashion choices.
 
 ## Architecture
 
