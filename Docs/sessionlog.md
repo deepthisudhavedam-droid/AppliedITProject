@@ -129,21 +129,22 @@ Today I have been working on a range of changes across the project.
 
 
 
-## ****Jhanvi****
+## ****Jhanhavi****
 
-23-04-2026 - decided about the project and made groups of 5 members
+23-04-2026 - I was Absent.
 
-28-04-2026 - created branches through gits hub
+28-04-2026 - Created a new github branch and merged the code changes to the main branch.
 
-30-04-2026 - created a vision document and created branches
+30-04-2026 - Absent for the session.
 
-05-05-2026 - created personas and senarios
+05-05-2026 - Absent for the session.
 
-07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their      topics and personas
+07-05-2026 - Absent for the session.
 
-12-05-2026 - installed VM & linux
+12-05-2026 - Installed Oracle Vm virtualbox & linux operating system.
 
-19-05-2026 - configured ftp with FileZilla, scp. installed NGINX, and deploid static website in NGINX website
+19-05-2026 - I had problems with FileZilla, so I have an alternative, WinSCP. 
+configured ftp with WinSCP, scp. installed NGINX
 
-21-05-2026 - learnt about cloud & container, installed docker & docker compose 
+21-05-2026 - Installed Docker & Docker Compose process is completed. 
 
