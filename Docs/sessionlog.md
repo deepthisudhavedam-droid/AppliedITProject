@@ -40,14 +40,23 @@ by using SSH protocol. comleted SCP
 Today i have created a branch and pushed the code to the main.
 I have also added the .gitignore file to exclude the Docs folder from the repository.
  
- 05-05-2026
+05-05-2026
 Today I have been working on a range of changes across the project.
 - Enhanced Product Vision Document: Expanded this document to include an AI Style Coach to help users style and discover new looks.
 - Added User Persona: Defined "Maya Chen" as the primary user—a busy professional who needs quick, weather-appropriate outfit suggestions.
 
-  07-05-2026
-- Today we have discussed user stories and developed functionalities. We have collabtrated with other teams and received some insights regarding project. Later we discussed them in our scrum meeting with task distribution and team updates
+07-05-2026
+- Today we have discussed user stories and developed functionalities. We have collabtrated with other teams and received some insights regarding project. Later we discussed them in our scrum meeting with task distribution and team updates.
 
+12-05-2026
+-Installed Oracle VM machine and setup of linux os. Completed 3 activites.
+
+19-05-2026
+- reconfigured SSH Settings and set up with Nginx webserver. Completed all the activities by deploying a static web page in a virtual machine.
+
+21-05-2026
+- I have learnt about cloud services and Docker today. I have installed docker and set up mysite using PowerShell and configured various containers. Later, I created an index file and tested it using Docker. About cloud services I have learnt different models as Saas, Paas etc, and the famous cloud services in europe are OHVCloud, UpCloud, Scaleway and in my country are AWS, Google, Azure.
+- We also have a discussion about our project with the professor and took the insights. 
   
 
 
