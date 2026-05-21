@@ -41,19 +41,44 @@ Today I have been working on a range of changes across the project.
 
 ## ****Rakshitha****
 
-28-04-2026
+# Git Session Log
 
-Today i have created a branch and pushed the code to the main.
-I have also added the .gitignore file to exclude the Docs folder from the repository.
+## **28-04-2026**
 
-05-05-2026
+* Created a new Git branch and successfully pushed the code changes to the main branch.
+* Added a `.gitignore` file to prevent the `Docs` folder from being tracked in the repository, ensuring a cleaner project structure.
 
-I was Absent in class
+---
 
-07-05-2026
+## **05-05-2026**
 
-I have created user stories and participated in Scrum meetings with the team. I also interacted with different teams to discuss their topics and personas.
-Additionally, I exchanged our project scenario with Group N, where we shared our project ideas and updates.I discussed our progress with Group N, and they provided their feedback and updates as well.
+* Absent for the session.
+
+---
+
+## **07-05-2026**
+
+* Developed user stories based on the project requirements and functionalities.
+* Actively participated in Scrum meetings to discuss project progress, task distribution, and team updates.
+* Collaborated with multiple teams to understand and discuss their project topics and user personas.
+* Exchanged project scenarios with **Group N** and shared project ideas, implementation approaches, and progress updates.
+* Discussed our team’s progress with Group N and received valuable feedback and suggestions for improvement.
+
+---
+
+## **12-05-2026**
+
+* Installed and configured **Oracle VM VirtualBox**.
+* Set up a Linux operating system environment for practical activities and experimentation.
+* Successfully completed the assigned activities up to Question 3.
+
+---
+
+## **19-05-2026**
+
+* Reconfigured SSH settings and practiced secure file transfer using SCP commands.
+* Installed and configured the **Nginx** web server.
+* Successfully deployed a static website using the Nginx server environment.
 
 
 ## ****Pallavi****
