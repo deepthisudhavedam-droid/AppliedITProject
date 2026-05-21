@@ -41,8 +41,6 @@ Today I have been working on a range of changes across the project.
 
 ## ****Rakshitha****
 
-# Git Session Log
-
 ## **28-04-2026**
 
 * Created a new Git branch and successfully pushed the code changes to the main branch.
