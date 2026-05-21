@@ -112,3 +112,24 @@ Today I have been working on a range of changes across the project.
 * Installed and configured **Oracle VM VirtualBox** along with the required resources for the project setup.
 * Installed a Linux operating system for the development environment.
 * Configured essential networking and file transfer services, including **SSH, FTP, and SCP**.
+
+
+
+## ****Jhanvi****
+
+23-04-2026 - decided about the project and made groups of 5 members
+
+28-04-2026 - created branches through gits hub
+
+30-04-2026 - created a vision document and created branches
+
+05-05-2026 - created personas and senarios
+
+07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their      topics and personas
+
+12-05-2026 - installed VM & linux
+
+19-05-2026 - configured ftp with FileZilla, scp. installed NGINX, and deploid static website in NGINX website
+
+21-05-2026 - learnt about cloud & container, installed docker & docker compose 
+
