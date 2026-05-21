@@ -10,6 +10,10 @@
 
 07-05-2026 - created user stories and conducted scrum meeting with team , Gone through various team to discuss about their      topics and personas
 
+12-05-2026 - installed VM & linux
+
+
+
 ## ****Vinay Kumar****
 
 28/04/2026
