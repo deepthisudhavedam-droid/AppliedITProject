@@ -81,18 +81,27 @@ Today I have been working on a range of changes across the project.
 
 ## ****Pallavi****
 
-28-04-2026
+## **28-04-2026**
 
-I hadn't arrived at the university yet.
+* Had not yet arrived at the university.
 
-05-05-2026
+---
 
-I hadn't arrived at the university yet.
+## **05-05-2026**
 
-07-05-2026
+* Had not yet arrived at the university.
 
-I hadn't arrived at the university yet.
+---
 
-19-05-2026
+## **07-05-2026**
 
-This is my first class. I've joined in the Group D, I've Installed VirtualBox and needed Resources for project, Installed Linux Operating System, and configured ssh, ftp, scp.
+* Had not yet arrived at the university.
+
+---
+
+## **19-05-2026**
+
+* Attended the first class session and joined **Group D**.
+* Installed and configured **Oracle VM VirtualBox** along with the required resources for the project setup.
+* Installed a Linux operating system for the development environment.
+* Configured essential networking and file transfer services, including **SSH, FTP, and SCP**.
