@@ -45,7 +45,7 @@ service-a  ──►  service-b
 | Frontend | HTML, CSS, JavaScript |
 | Backend | FastAPI (Python) |
 | Database | Optional/Can be added later |
-| Deployment | |
+| Deployment | Docker & Docker Compose |
 
 ## Getting Started
 
