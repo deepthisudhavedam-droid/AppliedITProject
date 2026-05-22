@@ -46,7 +46,7 @@ service-a  ──►  service-b
 | Backend | FastAPI (Python) |
 | Database | Optional/Can be added later |
 | Deployment | Docker & Docker Compose |
-| AI Integration | Docker & Docker Compose |
+| AI Integration | OpenAI API |
 
 ## Getting Started
 
