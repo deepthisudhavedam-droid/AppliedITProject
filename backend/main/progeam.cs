@@ -73,4 +73,3 @@ class Program
         Logger.Info("Outlet deleted (if existed).");
     }
 }
-``
