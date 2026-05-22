@@ -42,7 +42,7 @@ service-a  ──►  service-b
 
 | Layer | Technology |
 |---|---|
-| Frontend | |
+| Frontend | HTML, CSS, JavaScript |
 | Backend | |
 | Database | |
 | Deployment | |
