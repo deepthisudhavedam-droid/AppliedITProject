@@ -43,7 +43,7 @@ service-a  ──►  service-b
 | Layer | Technology |
 |---|---|
 | Frontend | HTML, CSS, JavaScript |
-| Backend | |
+| Backend | FastAPI (Python) |
 | Database | |
 | Deployment | |
 
