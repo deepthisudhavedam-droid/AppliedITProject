@@ -16,7 +16,16 @@ An AI fashion stylist recommendation should help users get personalized outfit i
 
 ## Project Overview
 
-The goal of this project is to make styling easier, faster, and more personalized. Instead of searching manually for shoes, bags, jewelry, or clothing that match a photo, users get AI-generated recommendations in seconds. This can help shoppers discover coordinated outfits, improve their personal style, and make more confident fashion choices.
+AI Outfit Finder is a smart web application that analyzes clothing images and recommends stylish outfit combinations using Artificial Intelligence. The system helps users easily select outfits by understanding clothing attributes and generating personalized styling suggestions.
+
+The application contains:
+
+FastAPI backend
+
+AI-powered outfit recommendation system
+
+Simple frontend interface for image upload and outfit display
+
 
 ## Architecture
 
