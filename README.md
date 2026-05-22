@@ -44,9 +44,10 @@ service-a  ──►  service-b
 |---|---|
 | Frontend | HTML, CSS, JavaScript |
 | Backend | FastAPI (Python) |
+| AI Integration | OpenAI API |
 | Database | Optional/Can be added later |
 | Deployment | Docker & Docker Compose |
-| AI Integration | OpenAI API |
+
 
 ## Getting Started
 
