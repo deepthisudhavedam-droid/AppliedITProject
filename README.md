@@ -44,7 +44,7 @@ service-a  ──►  service-b
 |---|---|
 | Frontend | HTML, CSS, JavaScript |
 | Backend | FastAPI (Python) |
-| Database | |
+| Database | Optional/Can be added later |
 | Deployment | |
 
 ## Getting Started
