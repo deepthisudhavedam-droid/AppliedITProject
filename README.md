@@ -100,6 +100,13 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
+## Known Limitations
+
+- API Quota: Gemini free tier: 20 requests/day
+- Processing Time: First CLIP inference (~3-5s) loads model; subsequent calls faster
+- Image Size: Larger images take longer to process
+- Clothing Scope: Best results with clear, well-lit images of single clothing items
+
 ## License
 
 MIT License. See LICENSE file for details.
