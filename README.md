@@ -100,6 +100,69 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
+### API Endpoints
+
+## POST /analyze-image
+
+# Analyzes an uploaded image and detects clothing attributes.
+
+# Request: - 
+Content-Type: multipart/form-data - Body: file (image file)
+
+# Response (200 OK):
+
+{
+  "category": "Shirt",
+  "color": "Blue",
+  "pattern": "Solid",
+  "style": "Casual",
+  "gender": "Menswear",
+  "fit": "Regular"
+}
+# Error Response (400 Bad Request):
+
+{
+  "detail": "No clothing detected. Please upload a photo of a shirt, pant, dress, jacket, or clothing on a hanger/person."
+}
+
+## POST /generate-outfits
+
+Generates outfit suggestions based on detected clothing attributes.
+
+# Request:
+
+{
+  "category": "Shirt",
+  "color": "Blue",
+  "pattern": "Solid",
+  "style": "Casual",
+  "gender": "Menswear",
+  "fit": "Regular"
+}
+# Response (200 OK):
+
+{
+  "detected": {
+    "category": "Shirt",
+    "color": "Blue",
+    "pattern": "Solid",
+    "style": "Casual",
+    "gender": "Menswear",
+    "fit": "Regular"
+  },
+  "suggestions": [
+    {
+      "title": "Weekend Wanderer",
+      "description": "A classic casual combination...",
+      "match_percentage": 95,
+      "reasoning": "Dark wash jeans pair perfectly...",
+      "best_occasion": "Weekend errands, casual brunch...",
+      "suggested_items": ["Dark Wash Jeans", "White Sneakers", "Blue Watch"]
+    },
+    ...
+  ]
+}
+
 ### Recent Improvements
 
 ## Image Analysis
