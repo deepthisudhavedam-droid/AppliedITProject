@@ -100,6 +100,10 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
+## Contributing
+
+Contributions welcome! Please: 1. Test locally before submitting changes 2. Include error handling and logging 3. Document any new environment variables 4. Keep frontend/backend separation clean
+
 ## Known Limitations
 
 - API Quota: Gemini free tier: 20 requests/day
