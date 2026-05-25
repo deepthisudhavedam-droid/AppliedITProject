@@ -100,9 +100,9 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
-### API Endpoints
+## API Endpoints
 
-## POST /analyze-image
+# POST /analyze-image
 
 # Analyzes an uploaded image and detects clothing attributes.
 
@@ -125,7 +125,7 @@ Content-Type: multipart/form-data - Body: file (image file)
   "detail": "No clothing detected. Please upload a photo of a shirt, pant, dress, jacket, or clothing on a hanger/person."
 }
 
-## POST /generate-outfits
+# POST /generate-outfits
 
 Generates outfit suggestions based on detected clothing attributes.
 
