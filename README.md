@@ -100,6 +100,14 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
+## Development
+
+- Logs are printed to console (stderr) during development
+- Use uvicorn --reload to auto-restart on code changes
+- Frontend updates instantly (no build step needed)
+- Check browser console (F12) for frontend errors
+- Check backend terminal for API/model logs
+
 ## Contributing
 
 Contributions welcome! Please: 1. Test locally before submitting changes 2. Include error handling and logging 3. Document any new environment variables 4. Keep frontend/backend separation clean
