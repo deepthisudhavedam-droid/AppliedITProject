@@ -8,7 +8,7 @@ An AI fashion stylist recommendation should help users get personalized outfit i
 | Role | Name |
 |---|---|
 | Product Owner | Deepthi sudha Vedam |
-| Scrum Master |Sainath Madhire |
+| Scrum Master |Sainath Reddy Madhire |
 | Developer |Vinay Kumar Komaraboina |
 | Developer |Rakshitha Boddu |
 | Developer |Pallavi Moulukapuri|
