@@ -102,4 +102,4 @@ ai-outfit-finder/
 
 ## License
 
-MIT
+MIT License. See LICENSE file for details.
