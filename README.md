@@ -70,14 +70,27 @@ The app will be available at `http://localhost:3000`.
 ## Repository Structure
 
 ```
+ai-outfit-finder/
 ├── README.md
-├── .gitignore
-├── docs/
-│   └── vision.md            # Product vision, personas, user stories
-├── services/
-│   ├── service-a/           # First microservice
-│   └── service-b/           # Second microservice
-└── docker-compose.yml
+├── backend/
+│   ├── main.py                 # FastAPI app initialization, CORS
+│   ├── requirements.txt         # Python dependencies
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── schemas.py          # Pydantic schemas (DetectedData, OutfitSuggestion, OutfitResponse)
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── analyze.py          # POST /analyze-image endpoint
+│   │   └── outfits.py          # POST /generate-outfits endpoint
+│   └── services/
+│       ├── __init__.py
+│       ├── vision.py           # CLIP model, clothing detection, attribute extraction
+│       └── llm.py              # Gemini LLM integration, prompt building, JSON parsing
+│
+└── frontend/
+    ├── index.html              # UI structure, form, results grid
+    ├── script.js               # Event handlers, API calls, result rendering
+    └── style.css               # Responsive design, card animations
 ```
 
 ## Documentation
