@@ -100,7 +100,7 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
-## API Endpoints
+# API Endpoints
 
 # POST /analyze-image
 
