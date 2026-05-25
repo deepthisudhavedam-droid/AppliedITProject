@@ -105,22 +105,39 @@ ai-outfit-finder/
 ## Image Analysis
 
 ✅ Enhanced clothing detection with margin-based comparison
+
 ✅ Support for hanger-displayed items and person-worn clothing
+
 ✅ Robust rejection of non-clothing images (buildings, landscapes)
+
 ## Outfit Generation
+
 ✅ Increased token limit to 4000 (prevents response truncation)
+
 ✅ Advanced JSON repair (fixes malformed responses, adds missing braces)
+
 ✅ Markdown stripping for properly wrapped responses
+
 ✅ Better error logging and user feedback
+
 ## Frontend
+
 ✅ Detailed error messages from backend (shown to user)
+
 ✅ Beautiful responsive card layout with animations
+
 ✅ Smooth scrolling to results section
+
 ✅ Real-time loading spinner during API calls
+
 ## Backend
+
 ✅ CORS enabled for all origins
+
 ✅ Comprehensive logging for debugging
+
 ✅ Graceful error handling with user-friendly messages
+
 ✅ Content-type validation for image uploads
 
 ## Development
