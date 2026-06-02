@@ -1,7 +1,14 @@
-# AI FASHION STYLIST RECOMMANDATION
+# AI Outfit Finder
 
-An AI fashion stylist recommendation should help users get personalized outfit ideas quickly by analyzing their wardrobe, style preferences, weather, and occasion. It should make dressing easier by reducing decision fatigue and showing complete looks that feel practical, confident, and stylish. The strongest recommendation is one that uses clothes the user already owns, so they can create new combinations without buying more. It should also support different needs, such as work outfits, casual looks, formal events, or sustainability goals. Extra value comes from features like wardrobe scanning, virtual try-on, and outfit saving, because they help users visualize choices and plan ahead. In short, an effective AI fashion stylist should be simple, personalized, and useful in everyday life, while still making styling feel creative and fun.
+A web app that analyzes images and suggests outfit combinations using CLIP vision model for clothing detection and Google Gemini LLM for intelligent outfit recommendations.
 
+## Features
+
+- **Image Analysis**: Upload clothing images and automatically detect attributes (category, color, pattern, style, gender fit)
+- **Clothing Detection**: Validates uploaded images contain actual clothing (rejects buildings, landscapes, etc.)
+- **Outfit Suggestions**: AI-powered outfit recommendations based on detected clothing attributes
+- **Responsive UI**: Modern, drag-and-drop frontend with real-time results
+- **Professional Card Display**: Beautiful outfit cards with match percentages, reasoning, and suggested items
 
 ## Team
 
