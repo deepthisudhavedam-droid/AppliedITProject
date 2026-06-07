@@ -118,15 +118,79 @@ Simple frontend interface for image upload and outfit display
 └──────────────────────────────────────────────────────────────┘
 ```
 
-## Tech Stack
+## How It Works
 
-| Layer | Technology |
-|---|---|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | FastAPI (Python) |
-| AI Integration | OpenAI API |
-| Database | Optional/Can be added later |
-| Deployment | Docker & Docker Compose |
+### Step 1: Image Upload & Clothing Detection
+
+1. User uploads an image through the drag-and-drop interface
+2. Frontend sends image to `POST /analyze-image`
+3. Backend validates content-type (must be `image/*`)
+4. **Vision Service (CLIP Model)**:
+   - Loads image and converts to RGB
+   - Uses OpenCLIP `ViT-B-32` (OpenAI pretrained)
+   - Compares image against 19 clothing-related prompts
+   - Compares against 10 non-clothing prompts
+   - **Classification**: If clothing score > non-clothing score → passes
+   - **Rejection**: Otherwise returns error "No clothing detected"
+
+5. If clothing is detected, extracts 6 attributes:
+   - **Category**: From 20 types (T-shirt, Jacket, Dress, etc.)
+   - **Color**: From 16 colors (Black, Blue, Red, etc.)
+   - **Pattern**: From 11 patterns (Solid, Striped, Floral, etc.)
+   - **Style**: From 10 styles (Casual, Formal, Streetwear, etc.)
+   - **Gender**: From 3 types (Menswear, Womenswear, Unisex)
+   - **Fit**: From 8 fits (Slim, Regular, Oversized, etc.)
+
+6. Backend returns `DetectedData` JSON to frontend
+
+### Step 2: Outfit Generation with Gemini LLM
+
+1. Frontend receives detected attributes and sends to `POST /generate-outfits`
+2. Backend builds a detailed fashion prompt with all attributes
+3. **LLM Service (Google Gemini)**:
+   - Calls `gemini-2.5-flash` model
+   - Temperature: 0.7 (creative but consistent)
+   - Max tokens: 4000 (prevents truncation)
+   - Prompt instructs model to create 3 outfit combinations
+
+4. **Response Processing**:
+   - Strips markdown code block markers (``` json...```)
+   - Repairs malformed JSON (missing braces, trailing commas)
+   - Parses suggestions array
+
+5. Each suggestion includes:
+   - Title (e.g., "Weekend Wanderer")
+   - Description (outfit concept)
+   - Match percentage (0-100, relevance to detected item)
+   - Reasoning (why this outfit works)
+   - Best occasion (when to wear it)
+   - Suggested items (list of complementary pieces)
+
+6. Backend returns `OutfitResponse` to frontend
+
+### Step 3: Results Display
+
+1. Frontend receives outfit suggestions
+2. Displays detected clothing attributes as tags
+3. Renders 3 beautiful cards with:
+   - Outfit title in bold
+   - Description paragraph
+   - Match % badge (gold accent color)
+   - Detailed reasoning
+   - Bullet list of suggested items
+   - Staggered animation (0.1s delay between cards)
+4. User can click "Start Over" to upload another image
+
+## Technology Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| **Frontend** | HTML5, CSS3, Vanilla JS | UI, form handling, API communication |
+| **Backend** | FastAPI, Uvicorn | REST API, async request handling |
+| **Vision** | OpenCLIP (ViT-B-32) | Image-to-text embeddings, clothing detection |
+| **LLM** | Google Gemini 2.5 Flash | Outfit suggestion generation |
+| **Image Proc** | Pillow (PIL) | Image loading, format conversion |
+| **ML Frameworks** | PyTorch, Transformers | CLIP model loading and inference |
 
 
 ## Getting Started
