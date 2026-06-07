@@ -21,6 +21,91 @@ A web app that analyzes images and suggests outfit combinations using CLIP visio
 | Developer |Pallavi Moulukapuri|
 | Developer |Jhanhavi Veerabhadraswamy |
 
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        Frontend (HTML/JS/CSS)                   │
+│                                                                 │
+│  [Image Upload] → [Generate Button] → [Results Display]        │
+│        ↓                  ↓                    ↓                │
+│     FormData          Two-Step API          Outfit Cards       │
+│                       Request               with Details        │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │
+                           ↓ HTTP POST
+┌──────────────────────────────────────────────────────────────────┐
+│                     FastAPI Backend (Port 8000)                 │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │ Router: /analyze-image (POST)                           │  │
+│  │ ├─ Input: Image file (multipart/form-data)             │  │
+│  │ ├─ Process: CLIP Vision Analysis                       │  │
+│  │ └─ Output: DetectedData JSON                           │  │
+│  └────────────────┬──────────────────────────────────────┘  │
+│                   │                                          │
+│                   ↓                                          │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │ Service: vision.py (CLIP Model)                         │  │
+│  │ ├─ is_clothing_image(): Binary classifier              │  │
+│  │ │  ├─ Compares clothing vs non-clothing scores        │  │
+│  │ │  └─ Rejects non-clothing (buildings, etc.)          │  │
+│  │ │                                                      │  │
+│  │ └─ _clip_best_label(): Attribute detection           │  │
+│  │    ├─ Category (T-shirt, Jacket, etc.)               │  │
+│  │    ├─ Color (Black, Blue, etc.)                       │  │
+│  │    ├─ Pattern (Solid, Striped, etc.)                  │  │
+│  │    ├─ Style (Casual, Formal, etc.)                    │  │
+│  │    ├─ Gender (Menswear, Womenswear, Unisex)          │  │
+│  │    └─ Fit (Slim, Regular, Oversized, etc.)            │  │
+│  └────────────────┬──────────────────────────────────────┘  │
+│                   │                                          │
+│                   ↓ (Frontend receives DetectedData)          │
+│                   │                                          │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │ Router: /generate-outfits (POST)                        │  │
+│  │ ├─ Input: DetectedData JSON                            │  │
+│  │ ├─ Process: Gemini LLM Generation                      │  │
+│  │ └─ Output: OutfitResponse with 3 suggestions           │  │
+│  └────────────────┬──────────────────────────────────────┘  │
+│                   │                                          │
+│                   ↓                                          │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │ Service: llm.py (Gemini LLM)                            │  │
+│  │ ├─ build_prompt(): Format clothing attributes          │  │
+│  │ │  └─ Create detailed fashion designer prompt          │  │
+│  │ │                                                      │  │
+│  │ └─ call_llm(): Query Gemini API                       │  │
+│  │    ├─ Model: gemini-2.5-flash                         │  │
+│  │    ├─ Max tokens: 4000                                 │  │
+│  │    ├─ Response: JSON wrapped in markdown              │  │
+│  │    │  ├─ Strip markdown code blocks (```)             │  │
+│  │    │  ├─ Repair malformed JSON                        │  │
+│  │    │  └─ Parse suggestions array                      │  │
+│  │    └─ Return: 3 outfit combinations                   │  │
+│  │       ├─ Title, Description                           │  │
+│  │       ├─ Match percentage (0-100)                     │  │
+│  │       ├─ Reasoning                                    │  │
+│  │       ├─ Best occasion                                │  │
+│  │       └─ Suggested items (list)                       │  │
+│  └────────────────┬──────────────────────────────────────┘  │
+│                   │                                          │
+└───────────────────┼──────────────────────────────────────────┘
+                    │
+                    ↓ HTTP Response
+┌──────────────────────────────────────────────────────────────┐
+│  Frontend Renders Results                                    │
+│  ├─ Display detected attributes in tags                     │
+│  ├─ Render 3 outfit suggestion cards                        │
+│  │  ├─ Title & Description                                │
+│  │  ├─ Match % badge (gold accent)                        │
+│  │  ├─ Reasoning paragraph                                │
+│  │  └─ Suggested items list                               │
+│  └─ Scroll to results with animation                        │
+└──────────────────────────────────────────────────────────────┘
+```
+
+
 ## Project Overview
 
 AI Outfit Finder is a smart web application that analyzes clothing images and recommends stylish outfit combinations using Artificial Intelligence. The system helps users easily select outfits by understanding clothing attributes and generating personalized styling suggestions.
