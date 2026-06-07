@@ -21,6 +21,19 @@ A web app that analyzes images and suggests outfit combinations using CLIP visio
 | Developer |Pallavi Moulukapuri|
 | Developer |Jhanhavi Veerabhadraswamy |
 
+## Project Overview
+
+AI Outfit Finder is a smart web application that analyzes clothing images and recommends stylish outfit combinations using Artificial Intelligence. The system helps users easily select outfits by understanding clothing attributes and generating personalized styling suggestions.
+
+The application contains:
+
+FastAPI backend
+
+AI-powered outfit recommendation system
+
+Simple frontend interface for image upload and outfit display
+
+
 ## Architecture
 
 ```
@@ -103,31 +116,6 @@ A web app that analyzes images and suggests outfit combinations using CLIP visio
 │  │  └─ Suggested items list                               │
 │  └─ Scroll to results with animation                        │
 └──────────────────────────────────────────────────────────────┘
-```
-
-
-## Project Overview
-
-AI Outfit Finder is a smart web application that analyzes clothing images and recommends stylish outfit combinations using Artificial Intelligence. The system helps users easily select outfits by understanding clothing attributes and generating personalized styling suggestions.
-
-The application contains:
-
-FastAPI backend
-
-AI-powered outfit recommendation system
-
-Simple frontend interface for image upload and outfit display
-
-
-## Architecture
-
-_Add your architecture diagram here (C4 Context or Container diagram). Update this as the project evolves._
-
-```
-service-a  ──►  service-b
-    │
-    ▼
-  database
 ```
 
 ## Tech Stack
