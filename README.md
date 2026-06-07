@@ -244,6 +244,114 @@ ai-outfit-finder/
 - [Scenarios](docs/Scenarios)
 - [User stories](docs/User%20stories)
 
+## Requirements
+
+- Python 3.10+ (recommended 3.11 or newer)
+- PyTorch with CUDA support (optional, uses CPU if unavailable)
+- See `backend/requirements.txt` for all dependencies
+
+## Environment
+
+Set your Gemini API key before running:
+
+```powershell
+$env:GEMINI_API_KEY = 'ya29.your_gemini_api_key_here'
+```
+
+Get a key from [Google AI Studio](https://ai.google.dev/)
+
+**Note**: Free tier has 20 requests/day limit. Upgrade to paid plan for higher quotas.
+
+## Setup & Run
+
+**Backend**:
+
+```powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+$env:GEMINI_API_KEY = 'ya29.your_gemini_api_key_here'
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+**Frontend**:
+
+```bash
+cd frontend
+python -m http.server 5500
+# Open http://localhost:5500 in browser
+```
+
+Or open `frontend/index.html` directly in your browser.
+
+## API Endpoints
+
+### POST /analyze-image
+Analyzes an uploaded image and detects clothing attributes.
+
+**Request:**
+- Content-Type: `multipart/form-data`
+- Body: `file` (image file)
+
+**Response (200 OK):**
+```json
+{
+  "category": "Shirt",
+  "color": "Blue",
+  "pattern": "Solid",
+  "style": "Casual",
+  "gender": "Menswear",
+  "fit": "Regular"
+}
+```
+
+**Error Response (400 Bad Request):**
+```json
+{
+  "detail": "No clothing detected. Please upload a photo of a shirt, pant, dress, jacket, or clothing on a hanger/person."
+}
+```
+
+### POST /generate-outfits
+Generates outfit suggestions based on detected clothing attributes.
+
+**Request:**
+```json
+{
+  "category": "Shirt",
+  "color": "Blue",
+  "pattern": "Solid",
+  "style": "Casual",
+  "gender": "Menswear",
+  "fit": "Regular"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "detected": {
+    "category": "Shirt",
+    "color": "Blue",
+    "pattern": "Solid",
+    "style": "Casual",
+    "gender": "Menswear",
+    "fit": "Regular"
+  },
+  "suggestions": [
+    {
+      "title": "Weekend Wanderer",
+      "description": "A classic casual combination...",
+      "match_percentage": 95,
+      "reasoning": "Dark wash jeans pair perfectly...",
+      "best_occasion": "Weekend errands, casual brunch...",
+      "suggested_items": ["Dark Wash Jeans", "White Sneakers", "Blue Watch"]
+    },
+    ...
+  ]
+}
+```
 ### Recent Improvements
 
 ## Image Analysis
