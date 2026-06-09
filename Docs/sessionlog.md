@@ -72,6 +72,14 @@ Today I have been working on a range of changes across the project.
 - I have learnt about cloud services and Docker today. I have installed docker and set up mysite using PowerShell and configured various containers. Later, I created an index file and tested it using Docker. About cloud services I have learnt different models as Saas, Paas etc, and the famous cloud services in europe are OHVCloud, UpCloud, Scaleway and in my country are AWS, Google, Azure.
 - We also have a discussion about our project with the professor and took the insights. 
   
+26-05-2026
+-We have presented our project in the class with our friends and professor. We discussed about ahat does our project does and how it works. After the presentation, we have taken insights from students and the professor about further developments and ideas.
+-Other teams had also presented their project ideas and discussed with us. There were unique ideas that inspired us on new topics. Among the students, I liked the presentation on *No ghost Job Application" and "Local Event Finder."  These ideas have a different approach compared to the existing market. So these ideas inspired me.
+
+28-05-2026
+-The professor has handed a full-stack MVC Demo project, and we started working on the project. We built a fast API application using MVC architecture pattern.
+- Completed task 3 by creating all the documents and running the backend successfully.
+
 
 
 ## ****Rakshitha****
