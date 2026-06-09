@@ -72,6 +72,7 @@ Today I have been working on a range of changes across the project.
 - Faced issues with virtual environment configuration and uvicorn installation.
 
 04-06-2026
+
 -Developed a task manager application using FASTAPI and React through an MVC architecture diagram.
 -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
 
