@@ -16,6 +16,16 @@
 
 21-05-2026 - learnt about cloud & container, installed docker & docker compose 
 
+26-05-2026 - Mid term presentation
+
+28-05-2026 - Absent for the session.
+
+02-06-2026 - 
+
+04-06-2026 - Absent for the session.
+
+09-06-2026 - 
+
 ## ****Vinay Kumar****
 
 28/04/2026
