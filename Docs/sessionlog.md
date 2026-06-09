@@ -80,7 +80,15 @@ Today I have been working on a range of changes across the project.
 -The professor has handed a full-stack MVC Demo project, and we started working on the project. We built a fast API application using MVC architecture pattern.
 - Completed task 3 by creating all the documents and running the backend successfully.
 
+02-06-2026
+- We have continued our tasks from task 3, and we have implemented CRUD operations on the tasks. and also tested api endpoints using Swagger UI
+- -Connected the frontend api layer (api.js) with backend services. I have learned how MVC separates controllers, services, and models.
+- Faced issues with virtual environment configuration and uvicorn installation.
 
+04-06-2026
+
+-Developed a task manager application using FASTAPI and React through an MVC architecture diagram.
+-Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
 
 ## ****Rakshitha****
 
