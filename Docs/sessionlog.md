@@ -44,6 +44,10 @@ Vinay Kumar
 I have created virtualbox and installed linux OS in the virtual box. then i have connected linux OS to filezilla
 by using SSH protocol. comleted SCP 
 
+21/05/2026
+Today, I learned about cloud services and Docker. I installed Docker, set up a website using PowerShell, and configured multiple containers. I also created an index.html file and successfully tested it within a Docker container. In addition, I explored different cloud computing models, including Software as a Service (SaaS) and Platform as a Service (PaaS). I learned about some of the leading cloud providers in Europe, such as OVHcloud, UpCloud , and **Scaleway**, as well as major global providers commonly used in my country, including **Amazon Web Services (AWS)**, **Google Cloud Platform (GCP)**, and **Microsoft Azure**. Finally, we had a project discussion with our professor, where we received valuable feedback and insights to guide our project's next steps.
+
+
 ## ****Sainath Reddy****
 
 28-04-2026
