@@ -44,6 +44,10 @@ Vinay Kumar
 I have created virtualbox and installed linux OS in the virtual box. then i have connected linux OS to filezilla
 by using SSH protocol. comleted SCP 
 
+21/05/2026
+Today, I learned about cloud services and Docker. I installed Docker, set up a website using PowerShell, and configured multiple containers. I also created an index.html file and successfully tested it within a Docker container. In addition, I explored different cloud computing models, including Software as a Service (SaaS) and Platform as a Service (PaaS). I learned about some of the leading cloud providers in Europe, such as OVHcloud, UpCloud , and **Scaleway**, as well as major global providers commonly used in my country, including **Amazon Web Services (AWS)**, **Google Cloud Platform (GCP)**, and **Microsoft Azure**. Finally, we had a project discussion with our professor, where we received valuable feedback and insights to guide our project's next steps.
+
+
 ## ****Sainath Reddy****
 
 28-04-2026
@@ -68,7 +72,23 @@ Today I have been working on a range of changes across the project.
 - I have learnt about cloud services and Docker today. I have installed docker and set up mysite using PowerShell and configured various containers. Later, I created an index file and tested it using Docker. About cloud services I have learnt different models as Saas, Paas etc, and the famous cloud services in europe are OHVCloud, UpCloud, Scaleway and in my country are AWS, Google, Azure.
 - We also have a discussion about our project with the professor and took the insights. 
   
+26-05-2026
+-We have presented our project in the class with our friends and professor. We discussed about ahat does our project does and how it works. After the presentation, we have taken insights from students and the professor about further developments and ideas.
+-Other teams had also presented their project ideas and discussed with us. There were unique ideas that inspired us on new topics. Among the students, I liked the presentation on *No ghost Job Application" and "Local Event Finder."  These ideas have a different approach compared to the existing market. So these ideas inspired me.
 
+28-05-2026
+-The professor has handed a full-stack MVC Demo project, and we started working on the project. We built a fast API application using MVC architecture pattern.
+- Completed task 3 by creating all the documents and running the backend successfully.
+
+02-06-2026
+- We have continued our tasks from task 3, and we have implemented CRUD operations on the tasks. and also tested api endpoints using Swagger UI
+- -Connected the frontend api layer (api.js) with backend services. I have learned how MVC separates controllers, services, and models.
+- Faced issues with virtual environment configuration and uvicorn installation.
+
+04-06-2026
+
+-Developed a task manager application using FASTAPI and React through an MVC architecture diagram.
+-Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
 
 ## ****Rakshitha****
 
