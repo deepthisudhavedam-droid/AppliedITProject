@@ -1,3 +1,4 @@
+
 ## ****Deepthi Sudha****
 
 23-04-2026 - decided about the project and made groups of 5 members
@@ -92,43 +93,63 @@ Today I have been working on a range of changes across the project.
 
 ## ****Rakshitha****
 
-## **28-04-2026**
+**28-04-2026**
 
-* Created a new Git branch and successfully pushed the code changes to the main branch.
-* Added a `.gitignore` file to prevent the `Docs` folder from being tracked in the repository, ensuring a cleaner project structure.
-
----
-
-## **05-05-2026**
-
-* Absent for the session.
+Today, I created a new Git branch and successfully pushed the code changes to the main branch. I also added a `.gitignore` file to exclude the **Docs** folder from being tracked in the repository, ensuring a cleaner and more organized project structure.
 
 ---
 
-## **07-05-2026**
+**05-05-2026**
 
-* Developed user stories based on the project requirements and functionalities.
-* Actively participated in Scrum meetings to discuss project progress, task distribution, and team updates.
-* Collaborated with multiple teams to understand and discuss their project topics and user personas.
-* Exchanged project scenarios with **Group N** and shared project ideas, implementation approaches, and progress updates.
-* Discussed our team’s progress with Group N and received valuable feedback and suggestions for improvement.
+Absent for the session.
 
 ---
 
-## **12-05-2026**
+**07-05-2026**
 
-* Installed and configured **Oracle VM VirtualBox**.
-* Set up a Linux operating system environment for practical activities and experimentation.
-* Successfully completed the assigned activities up to Question 3.
+Today, we developed user stories based on the project requirements and identified the key functionalities of our application. We actively participated in the Scrum meeting to discuss project progress, task allocation, and team updates. We also collaborated with other teams to understand their project ideas and user personas. We exchanged project scenarios and implementation approaches with **Group N**, discussed our team's progress, and received valuable feedback and suggestions for further improvement.
 
 ---
 
-## **19-05-2026**
+**12-05-2026**
 
-* Reconfigured SSH settings and practiced secure file transfer using SCP commands.
-* Installed and configured the **Nginx** web server.
-* Successfully deployed a static website using the Nginx server environment.
+Today, I installed and configured **Oracle VM VirtualBox** and successfully set up a **Linux operating system** environment for practical activities and experimentation. I completed all the assigned activities up to **Question 3**, which enhanced my understanding of virtualization and Linux environments.
 
+---
+
+**19-05-2026**
+
+Today, I reconfigured **SSH settings** and practiced secure file transfer using **SCP commands**. I also installed and configured the **Nginx web server** and successfully deployed a static website using the Nginx server environment. This activity helped me gain practical experience in server configuration and web deployment.
+
+---
+
+**21-05-2026**
+
+Today, I learned about **Docker** and **cloud services**. I installed **Docker** and **Docker Compose**, practiced various Docker commands, and explored container management concepts. I created and configured containers, developed an index file, and tested the application using Docker. Additionally, I learned about different cloud service models such as **SaaS**, **PaaS**, and **IaaS**, and explored popular cloud service providers in Europe and globally. We also discussed our project progress with the professor and received valuable insights and suggestions for further development.
+
+---
+
+**26-05-2026**
+
+Today, we presented our project in class to our professor and fellow students. We explained the objectives of our project, its functionality, and the proposed implementation approach. After the presentation, we received valuable feedback and suggestions from both the professor and our classmates regarding future improvements and additional features. We also attended presentations by other teams, which introduced us to several innovative ideas and approaches that inspired us and broadened our understanding of current project trends.
+
+---
+
+**28-05-2026**
+
+Today, we began working on the **Full-Stack MVC Demo Project** provided by the professor. We developed a **FastAPI** application using the **MVC architecture pattern** and gained practical experience in organizing backend applications using models, views, and controllers. I successfully completed the assigned tasks by creating the required project documents and running the backend application successfully.
+
+---
+
+**02-06-2026**
+
+Today, we continued working on the MVC project and implemented **CRUD operations** for the task management system. We tested the API endpoints using **Swagger UI** and connected the frontend API layer with backend services. Through this activity, I gained a better understanding of how MVC architecture separates controllers, services, and models. I also encountered and resolved issues related to virtual environment configuration and **Uvicorn** installation.
+
+---
+
+**04-06-2026**
+
+Today, I worked on developing a **Task Manager Application** using **FastAPI** and **React** following the **MVC architecture pattern**. I successfully connected the frontend and backend components and tested the communication between them using API endpoints and Swagger UI. This activity enhanced my understanding of full-stack application development and client-server communication.
 
 ## ****Pallavi****
 
