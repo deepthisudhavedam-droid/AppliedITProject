@@ -4,20 +4,29 @@ from PIL import Image
 import torch
 import open_clip
 
-
-# -----------------------------
-# Load CLIP model (OpenCLIP)
-# -----------------------------
+model = None
+preprocess = None
+tokenizer = None
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-model, _, preprocess = open_clip.create_model_and_transforms(
-    "ViT-B-32",
-    pretrained="openai"
-)
-tokenizer = open_clip.get_tokenizer("ViT-B-32")
 
-model = model.to(device)
-model.eval()
+def _load_clip_model():
+    global model, preprocess, tokenizer
+    if model is None or preprocess is None or tokenizer is None:
+        loaded_model, _, loaded_preprocess = open_clip.create_model_and_transforms(
+            "ViT-B-32",
+            pretrained="openai"
+        )
+        loaded_tokenizer = open_clip.get_tokenizer("ViT-B-32")
+
+        loaded_model = loaded_model.to(device)
+        loaded_model.eval()
+
+        model = loaded_model
+        preprocess = loaded_preprocess
+        tokenizer = loaded_tokenizer
+
+    return model, preprocess, tokenizer
 
 
 # -----------------------------
@@ -92,6 +101,7 @@ NON_CLOTHING_CHECK = [
 # Clothing detection helper
 # -----------------------------
 def is_clothing_image(image: Image.Image) -> bool:
+    _load_clip_model()
     image_tensor = preprocess(image).unsqueeze(0).to(device)
     text_tokens = tokenizer(CLOTHING_CHECK + NON_CLOTHING_CHECK).to(device)
 
@@ -119,6 +129,7 @@ def is_clothing_image(image: Image.Image) -> bool:
 # CLIP scoring helper
 # -----------------------------
 def _clip_best_label(image: Image.Image, labels: List[str]) -> str:
+    _load_clip_model()
     image_tensor = preprocess(image).unsqueeze(0).to(device)
 
     text_tokens = tokenizer(labels).to(device)
