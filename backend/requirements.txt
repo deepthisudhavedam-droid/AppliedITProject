@@ -5,9 +5,3 @@ torch
 transformers
 google-generativeai
 open-clip-torch
-SQLAlchemy
-bcrypt
-PyJWT
-email-validator
-python-multipart
-
