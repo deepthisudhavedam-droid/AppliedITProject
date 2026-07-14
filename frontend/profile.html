@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | AI Outfit Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a class="nav-brand" href="index.html">AI Outfit Finder</a>
+            <div class="nav-links" id="navLinks">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="nav-user hidden" id="navUser">
+                <button id="profileBtn" class="profile-btn" title="Open profile">
+                    <span id="profileInitial"></span>
+                </button>
+                <button id="logoutBtn" class="secondary-btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="form-page">
+        <div class="profile-card">
+            <h1>Your Profile</h1>
+            <p>Update your email or password using the form below.</p>
+
+            <form id="profileForm" class="auth-form">
+                <div class="field-group">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" disabled>
+                </div>
+                <div class="field-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com">
+                </div>
+                <div class="field-group">
+                    <label for="password">New Password</label>
+                    <input id="password" name="password" type="password" placeholder="Leave blank to keep current password">
+                </div>
+                <div class="button-row">
+                    <button type="submit" class="primary-btn">Save Changes</button>
+                    <button type="button" id="cancelBtn" class="secondary-btn">Cancel</button>
+                </div>
+            </form>
+
+            <div id="profileError" class="error-message hidden"></div>
+            <div id="profileSuccess" class="success-message hidden"></div>
+
+            <section class="wardrobe-section" aria-labelledby="wardrobeHeading">
+                <div class="wardrobe-header">
+                    <div>
+                        <h2 id="wardrobeHeading">My Wardrobe</h2>
+                        <p>Manage the clothes you have uploaded.</p>
+                    </div>
+                    <div class="wardrobe-actions">
+                        <button type="button" id="viewWardrobeBtn" class="secondary-btn">View Wardrobe</button>
+                        <button type="button" id="addClothesBtn" class="primary-btn">Add Clothes</button>
+                    </div>
+                </div>
+
+                <div id="wardrobeStatus" class="wardrobe-status" aria-live="polite"></div>
+                <div id="wardrobeGrid" class="wardrobe-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <div id="wardrobeModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="wardrobeModalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="wardrobeModalTitle">Add Clothes</h3>
+                <button type="button" id="closeModalBtn" class="icon-btn">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="upload-options">
+                    <label class="upload-option">
+                        <input type="file" id="deviceFileInput" accept="image/jpeg,image/png,image/webp" capture="environment" hidden>
+                        <span>Choose from device</span>
+                    </label>
+                    <button type="button" id="takePhotoBtn" class="secondary-btn">Take photo</button>
+                </div>
+
+                <div id="cameraContainer" class="camera-container hidden">
+                    <video id="cameraPreview" autoplay playsinline muted></video>
+                    <canvas id="cameraCanvas" hidden></canvas>
+                    <div class="camera-actions">
+                        <button type="button" id="capturePhotoBtn" class="primary-btn">Capture</button>
+                        <button type="button" id="cancelCameraBtn" class="secondary-btn">Cancel</button>
+                    </div>
+                </div>
+
+                <div id="uploadPreview" class="upload-preview hidden">
+                    <img id="uploadPreviewImage" alt="Selected preview">
+                    <div class="upload-preview-actions">
+                        <button type="button" id="replaceImageBtn" class="secondary-btn">Replace</button>
+                        <button type="button" id="clearImageBtn" class="secondary-btn">Remove</button>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="wardrobeCategory">Category</label>
+                    <input id="wardrobeCategory" type="text" placeholder="e.g. Jacket">
+                </div>
+                <div class="field-group">
+                    <label for="wardrobeColor">Color</label>
+                    <input id="wardrobeColor" type="text" placeholder="e.g. Navy">
+                </div>
+                <div class="field-group">
+                    <label for="wardrobeNotes">Notes</label>
+                    <textarea id="wardrobeNotes" rows="3" placeholder="Optional notes"></textarea>
+                </div>
+
+                <div id="uploadError" class="error-message hidden"></div>
+                <div id="uploadSuccess" class="success-message hidden"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="cancelUploadBtn" class="secondary-btn">Cancel</button>
+                <button type="button" id="uploadWardrobeBtn" class="primary-btn">Upload</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageViewerModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="imageViewerTitle">
+        <div class="modal-content image-viewer">
+            <div class="modal-header">
+                <h3 id="imageViewerTitle">Wardrobe Item</h3>
+                <button type="button" id="closeViewerBtn" class="icon-btn">✕</button>
+            </div>
+            <div class="modal-body">
+                <img id="imageViewer" alt="Wardrobe item preview">
+            </div>
+        </div>
+    </div>
+
+    <script src="app-utils.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

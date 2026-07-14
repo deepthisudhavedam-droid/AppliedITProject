@@ -1,12 +1,99 @@
 import os
 import json
-import google.generativeai as genai
+from pathlib import Path
+
+try:
+    from google import genai as google_genai
+    from google.genai import types as google_genai_types
+except ImportError:  # pragma: no cover - fallback for older environments
+    google_genai = None
+    google_genai_types = None
+
+try:
+    import google.generativeai as genai
+except ImportError:  # pragma: no cover - fallback for environments without the old package
+    genai = None
+
 from models.schemas import DetectedData
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure the API
-genai.configure(api_key=GEMINI_API_KEY)
+def get_dotenv_path():
+    candidates = [
+        Path(__file__).resolve().parents[1] / ".env",
+        Path(__file__).resolve().parents[2] / ".env",
+        Path.cwd() / ".env",
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return candidates[0]
+
+
+def _load_dotenv_values():
+    env_path = get_dotenv_path()
+    if not env_path.exists():
+        return {}
+
+    values = {}
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+
+    return values
+
+
+def resolve_api_key():
+    for key in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+        value = os.getenv(key)
+        if value and value.strip():
+            return value.strip()
+
+    dotenv_values = _load_dotenv_values()
+    for key in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+        value = dotenv_values.get(key)
+        if value and value.strip():
+            return value.strip()
+
+    return None
+
+
+def resolve_model_candidates():
+    env_model = os.getenv("GEMINI_MODEL")
+    if env_model and env_model.strip():
+        return [env_model.strip()]
+
+    dotenv_values = _load_dotenv_values()
+    dotenv_model = dotenv_values.get("GEMINI_MODEL")
+    if dotenv_model and dotenv_model.strip():
+        return [dotenv_model.strip()]
+
+    return [
+        "models/gemini-2.5-flash-lite",
+        "models/gemini-flash-latest",
+        "models/gemini-2.0-flash-lite-001",
+        "models/gemini-2.0-flash-lite",
+        "models/gemini-2.0-flash-001",
+        "models/gemini-pro-latest",
+    ]
+
+
+def configure_genai():
+    api_key = resolve_api_key()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY is not set. Add it to the environment or a .env file.")
+
+    if google_genai is not None:
+        return api_key
+
+    if genai is not None:
+        genai.configure(api_key=api_key)
+        return api_key
+
+    raise RuntimeError("No supported Gemini client is available. Install google-genai or google-generativeai.")
 
 
 def build_prompt(detected: DetectedData) -> str:
@@ -62,22 +149,61 @@ Do NOT include any text outside the JSON.
 
 
 def call_llm(prompt: str):
-    if not GEMINI_API_KEY:
-        raise RuntimeError("GEMINI_API_KEY is not set")
+    api_key = configure_genai()
 
     try:
-        model_name = "gemini-flash-lite-latest"
-        print(f"Initializing {model_name}...")
-        model = genai.GenerativeModel(model_name)
-        
-        print(f"Sending request to Gemini API...")
-        response = model.generate_content(
-            prompt,
-            generation_config=genai.types.GenerationConfig(
-                temperature=0.7,
-                max_output_tokens=4000,  # Increased to prevent truncation
-            )
-        )
+        last_error = None
+        for model_name in resolve_model_candidates():
+            try:
+                print(f"Initializing {model_name}...")
+
+                if google_genai is not None:
+                    client = google_genai.Client(api_key=api_key)
+                    print(f"Sending request to Gemini API with {model_name}...")
+                    response = client.models.generate_content(
+                        model=model_name,
+                        contents=prompt,
+                        config=google_genai_types.GenerateContentConfig(
+                            temperature=0.7,
+                            max_output_tokens=4000,
+                        ),
+                    )
+                else:
+                    model = genai.GenerativeModel(model_name)
+                    print(f"Sending request to Gemini API with {model_name}...")
+                    response = model.generate_content(
+                        prompt,
+                        generation_config=genai.types.GenerationConfig(
+                            temperature=0.7,
+                            max_output_tokens=4000,
+                        ),
+                    )
+
+                break
+            except Exception as exc:
+                last_error = exc
+                exc_str = str(exc)
+                print(f"Model {model_name} failed: {exc}")
+                # Check for quota or rate limit errors
+                if "429" in exc_str or "RESOURCE_EXHAUSTED" in exc_str or "quota" in exc_str.lower():
+                    print(f"Quota or rate limit exceeded - moving to next model")
+                elif "503" in exc_str or "UNAVAILABLE" in exc_str:
+                    print(f"Model temporarily unavailable - moving to next model")
+        else:
+            last_error_str = str(last_error)
+            if "429" in last_error_str or "RESOURCE_EXHAUSTED" in last_error_str:
+                raise RuntimeError(
+                    "Gemini API quota exceeded. The free tier has daily/per-minute limits. "
+                    "Please wait for the quota to reset, or upgrade to a paid plan. "
+                    f"Error: {last_error}"
+                )
+            elif "503" in last_error_str or "UNAVAILABLE" in last_error_str:
+                raise RuntimeError(
+                    "All Gemini models are temporarily unavailable due to high demand. "
+                    "Please try again in a few moments."
+                )
+            else:
+                raise RuntimeError(f"All Gemini models failed. Last error: {last_error}")
         
         print(f"Got response from Gemini")
         

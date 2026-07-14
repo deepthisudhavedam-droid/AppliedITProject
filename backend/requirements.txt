@@ -4,4 +4,11 @@ pillow
 torch
 transformers
 google-generativeai
+google-genai
 open-clip-torch
+SQLAlchemy
+bcrypt
+PyJWT
+email-validator
+python-multipart
+
