@@ -22,8 +22,8 @@ def get_user_by_email(db: Session, email: str) -> User | None:
     return db.query(User).filter(User.email == email.lower().strip()).first()
 
 
-def get_user_by_id(db: Session, user_id: str) -> User | None:
-    """Return the first user matching a UUID identifier."""
+def get_user_by_id(db: Session, user_id: int) -> User | None:
+    """Return the first user matching an integer identifier."""
     return db.query(User).filter(User.id == user_id).first()
 
 

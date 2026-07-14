@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
-from routers import analyze, outfits, auth
+from routers import analyze, outfits, auth, wardrobe
 from database.connection import init_db
 
 from fastapi.middleware.cors import CORSMiddleware 
@@ -35,8 +35,11 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(analyze.router)
 app.include_router(outfits.router)
+app.include_router(wardrobe.router)
 
-app.mount("/frontend", StaticFiles(directory="../frontend", html=True), name="frontend")
+frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
+if os.path.isdir(frontend_dir):
+    app.mount("/frontend", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
 @app.on_event("startup")
 def startup_event():

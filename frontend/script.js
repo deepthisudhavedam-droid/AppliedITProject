@@ -40,17 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavbar();
 
     document.getElementById('logoutBtn')?.addEventListener('click', async () => {
-        await fetch('http://127.0.0.1:8000/logout', {
+        await window.authenticatedFetch('/logout', {
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${localStorage.getItem('authToken') || ''}`,
-            },
+            responseType: 'json',
         }).catch(() => {
             // ignore network errors on explicit logout
         });
 
-        localStorage.removeItem('authToken');
-        localStorage.removeItem('authUser');
+        window.clearSession();
         updateNavbar();
         window.location.href = 'index.html';
     });
@@ -176,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData();
             formData.append('file', selectedFile);
 
-            const analyzeRes = await fetch("http://127.0.0.1:8000/analyze-image", {
+            const analyzeRes = await fetch(window.apiUrl('/analyze-image'), {
                 method: "POST",
                 body: formData
             });
@@ -198,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fitTag) fitTag.textContent = `Fit: ${detected.fit}`;
 
             // STEP 2 — Generate outfits
-            const outfitRes = await fetch("http://127.0.0.1:8000/generate-outfits", {
+            const outfitRes = await fetch(window.apiUrl('/generate-outfits'), {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(detected)

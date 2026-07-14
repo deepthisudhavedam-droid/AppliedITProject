@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APT Attack Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b1120;
+      color: #e5e7eb;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .panel {
+      background: #111827;
+      border: 1px solid #263244;
+      border-radius: 8px;
+    }
+
+    .stage {
+      border: 1px solid #293548;
+      background: #0f172a;
+      border-radius: 8px;
+    }
+
+    .stage.done {
+      border-color: #16a34a;
+      color: #bbf7d0;
+    }
+
+    .stage.active {
+      border-color: #38bdf8;
+      background: #10243a;
+      color: #e0f2fe;
+    }
+
+    .stage.waiting {
+      color: #94a3b8;
+    }
+
+    .video-box {
+      min-height: 420px;
+      background: #020617;
+      border: 1px solid #263244;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .node {
+      width: 112px;
+      height: 80px;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      background: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .node.active {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+    }
+
+    .path {
+      height: 2px;
+      background: #334155;
+      flex: 1;
+      min-width: 38px;
+      position: relative;
+    }
+
+    .packet {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: #38bdf8;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      animation: move 2s linear infinite;
+    }
+
+    @keyframes move {
+      from { left: 0; opacity: 0.2; }
+      20% { opacity: 1; }
+      to { left: calc(100% - 12px); opacity: 0.2; }
+    }
+
+    .log {
+      background: #0f172a;
+      border-left: 3px solid #38bdf8;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .video-flow {
+        flex-direction: column;
+      }
+
+      .path {
+        width: 2px;
+        height: 34px;
+        min-width: 0;
+      }
+
+      .packet {
+        left: -5px;
+        top: 0;
+        animation: moveDown 2s linear infinite;
+      }
+
+      @keyframes moveDown {
+        from { top: 0; opacity: 0.2; }
+        20% { opacity: 1; }
+        to { top: calc(100% - 12px); opacity: 0.2; }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useEffect, useMemo, useState } = React;
+
+    const stages = [
+      {
+        title: "Reconnaissance",
+        icon: "search",
+        activeNode: "Attacker",
+        action: "The attacker scans public systems to find weak entry points.",
+        log: "Network scan detected against VPN and web portal.",
+        defense: "Defenders monitor repeated connection attempts from one external address."
+      },
+      {
+        title: "Initial Access",
+        icon: "mail-warning",
+        activeNode: "Victim",
+        action: "A phishing email tricks the user into opening a fake document link.",
+        log: "Suspicious email link opened from a student workstation.",
+        defense: "Email filtering and browser logs identify the suspicious redirect."
+      },
+      {
+        title: "Execution",
+        icon: "square-terminal",
+        activeNode: "Victim",
+        action: "A simulated command runs on the victim computer.",
+        log: "Sysmon Event ID 1: powershell.exe process created.",
+        defense: "Process monitoring detects unusual script activity."
+      },
+      {
+        title: "Persistence",
+        icon: "key-round",
+        activeNode: "Victim",
+        action: "The attacker adds a startup entry so access can continue later.",
+        log: "Sysmon Event ID 13: registry startup key modified.",
+        defense: "Endpoint tools alert on unexpected autorun changes."
+      },
+      {
+        title: "Privilege Escalation",
+        icon: "shield-plus",
+        activeNode: "Victim",
+        action: "The attacker tries to gain administrator permissions.",
+        log: "Windows event shows special privileges assigned to a new logon.",
+        defense: "Security logs reveal a privilege change outside normal behavior."
+      },
+      {
+        title: "Credential Access",
+        icon: "database-zap",
+        activeNode: "Database",
+        action: "The attacker searches for passwords and account secrets.",
+        log: "Credential store access attempt detected.",
+        defense: "Defenders watch for LSASS access and abnormal login patterns."
+      },
+      {
+        title: "Lateral Movement",
+        icon: "network",
+        activeNode: "Network",
+        action: "The attacker moves from one computer to another internal system.",
+        log: "SMB connection from compromised host to another workstation.",
+        defense: "Internal network monitoring catches unusual host-to-host movement."
+      },
+      {
+        title: "Command and Control",
+        icon: "satellite-dish",
+        activeNode: "Internet",
+        action: "The compromised machine checks in with a remote command server.",
+        log: "Repeated outbound HTTPS beaconing to rare external domain.",
+        defense: "Proxy and DNS logs show regular beacon timing."
+      },
+      {
+        title: "Data Exfiltration",
+        icon: "file-up",
+        activeNode: "Database",
+        action: "The attacker compresses and sends sensitive files outside the network.",
+        log: "Large HTTP POST upload detected from internal host.",
+        defense: "Data-loss monitoring flags unusual outbound transfer size."
+      },
+      {
+        title: "Detection",
+        icon: "siren",
+        activeNode: "SOC",
+        action: "The SOC connects the evidence and stops the simulated attack.",
+        log: "High severity Wazuh alert: APT chain detected and endpoint isolated.",
+        defense: "Incident response isolates the system and begins investigation."
+      }
+    ];
+
+    const nodes = [
+      ["Attacker", "laptop"],
+      ["Internet", "globe-2"],
+      ["Victim", "monitor"],
+      ["Network", "network"],
+      ["Database", "database"],
+      ["SOC", "shield-alert"]
+    ];
+
+    function Icon({ name, size = 20, className = "" }) {
+      return <i data-lucide={name} style={{ width: size, height: size }} className={className}></i>;
+    }
+
+    function App() {
+      const [started, setStarted] = useState(false);
+      const [playing, setPlaying] = useState(false);
+      const [current, setCurrent] = useState(0);
+
+      useEffect(() => {
+        if (window.lucide) window.lucide.createIcons();
+      });
+
+      const stage = stages[current];
+      const progress = started ? Math.round(((current + 1) / stages.length) * 100) : 0;
+      const complete = started && current === stages.length - 1 && !playing;
+
+      useEffect(() => {
+        if (!started || !playing) return;
+
+        const timer = window.setTimeout(() => {
+          if (current < stages.length - 1) {
+            setCurrent(current + 1);
+          } else {
+            setPlaying(false);
+          }
+        }, 3200);
+
+        return () => window.clearTimeout(timer);
+      }, [started, playing, current]);
+
+      const start = () => {
+        setStarted(true);
+        setPlaying(true);
+        setCurrent(0);
+      };
+
+      const restart = () => {
+        setStarted(false);
+        setPlaying(false);
+        setCurrent(0);
+      };
+
+      return (
+        <main className="mx-auto max-w-7xl px-4 py-6">
+          <header className="mb-5 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-cyan-300">Educational demo only</p>
+              <h1 className="mt-1 text-3xl font-extrabold text-white md:text-4xl">Advanced Persistent Threat Attack Simulator</h1>
+              <p className="mt-2 max-w-3xl text-slate-300">A simple presentation view that plays the attack process from start to detection.</p>
+            </div>
+            <button
+              onClick={started ? restart : start}
+              className="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 font-bold text-slate-950 hover:bg-cyan-300"
+            >
+              <Icon name={started ? "rotate-ccw" : "play"} size={18} />
+              {started ? "Restart Simulation" : "Start Simulation"}
+            </button>
+          </header>
+
+          <div className="panel mb-5 p-4">
+            <div className="mb-2 flex items-center justify-between text-sm font-bold text-slate-300">
+              <span>{started ? stage.title : "Ready to begin"}</span>
+              <span>{progress}%</span>
+            </div>
+            <div className="h-3 overflow-hidden rounded-full bg-slate-800">
+              <div className="h-full rounded-full bg-cyan-400 transition-all duration-500" style={{ width: `${progress}%` }}></div>
+            </div>
+          </div>
+
+          <section className="layout grid grid-cols-[300px_1fr] gap-5">
+            <aside className="panel p-4">
+              <h2 className="mb-4 text-lg font-extrabold text-white">Stages</h2>
+              <div className="space-y-2">
+                {stages.map((item, index) => {
+                  const state = !started ? "waiting" : index < current ? "done" : index === current ? "active" : "waiting";
+                  return (
+                    <div key={item.title} className={`stage ${state} flex items-center gap-3 p-3`}>
+                      <div className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-slate-900">
+                        <Icon name={index < current && started ? "check" : item.icon} size={18} />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold">{item.title}</div>
+                        <div className="text-xs opacity-75">Step {index + 1}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </aside>
+
+            <section className="panel p-4">
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <h2 className="text-xl font-extrabold text-white">Simulation Video</h2>
+                  <p className="mt-1 text-sm text-slate-400">Click Start and the attack story will play from beginning to end.</p>
+                </div>
+                {started && (
+                  <button
+                    onClick={() => setPlaying(!playing)}
+                    disabled={complete}
+                    className="inline-flex items-center gap-2 rounded-lg bg-emerald-400 px-5 py-3 font-bold text-slate-950 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-slate-300"
+                  >
+                    <Icon name={playing ? "pause" : "play"} size={18} />
+                    {complete ? "Simulation Complete" : playing ? "Pause Video" : "Resume Video"}
+                  </button>
+                )}
+              </div>
+
+              <div className="video-box p-5">
+                {!started ? (
+                  <div className="flex h-[380px] flex-col items-center justify-center text-center">
+                    <Icon name="shield-play" size={64} className="mb-5 text-cyan-300" />
+                    <h3 className="text-2xl font-extrabold text-white">Press Start Simulation</h3>
+                    <p className="mt-3 max-w-xl text-slate-300">The full attack process will appear here like a simple video, from reconnaissance to detection.</p>
+                  </div>
+                ) : (
+                  <div className="flex min-h-[380px] flex-col justify-between gap-6">
+                    <div className="video-flow flex items-center justify-center gap-3 pt-8">
+                      {nodes.map(([label, icon], index) => (
+                        <React.Fragment key={label}>
+                          <div className={`node ${stage.activeNode === label ? "active" : ""}`}>
+                            <Icon name={icon} size={24} className={stage.activeNode === label ? "text-cyan-300" : "text-slate-300"} />
+                            <span className="text-xs font-bold text-slate-200">{label}</span>
+                          </div>
+                          {index < nodes.length - 1 && (
+                            <div className="path">
+                              {index <= current % (nodes.length - 1) && <span className="packet"></span>}
+                            </div>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+
+                    <div className="rounded-lg bg-slate-900 p-5">
+                      <div className="mb-2 flex items-center gap-2 text-cyan-300">
+                        <Icon name={stage.icon} size={22} />
+                        <h3 className="text-2xl font-extrabold text-white">{stage.title}</h3>
+                      </div>
+                      <p className="text-lg leading-8 text-slate-200">{stage.action}</p>
+                      {complete && (
+                        <p className="mt-3 rounded-md bg-emerald-500/10 p-3 text-sm font-bold text-emerald-200">
+                          Simulation complete: the SOC detected the attack and isolated the affected system.
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="grid gap-4 md:grid-cols-2">
+                      <div className="log p-4">
+                        <div className="mb-1 text-sm font-bold text-cyan-300">Simulated Log</div>
+                        <p className="text-sm leading-6 text-slate-300">{stage.log}</p>
+                      </div>
+                      <div className="log p-4">
+                        <div className="mb-1 text-sm font-bold text-emerald-300">How Defenders Notice</div>
+                        <p className="text-sm leading-6 text-slate-300">{stage.defense}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+          </section>
+        </main>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

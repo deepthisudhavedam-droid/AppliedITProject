@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE = 'http://127.0.0.1:8000';
+    const API_BASE = window.API_BASE || 'http://127.0.0.1:8000';
 
     // If the user already has an active token, redirect to the main page.
     const token = localStorage.getItem('authToken');

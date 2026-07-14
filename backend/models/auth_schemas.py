@@ -29,7 +29,7 @@ class UserUpdate(BaseModel):
 
 
 class UserResponse(BaseModel):
-    id: str
+    id: int
     username: str
     email: EmailStr
     created_at: datetime
