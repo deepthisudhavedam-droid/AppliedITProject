@@ -1,0 +1,5 @@
+**Question 1: How did the personas influence your design choices?**
+*Answer:* The personas acted as a "north star." For example, we initially didn't prioritize weather integration, but after creating "Maya," it became clear that her primary pain point was morning efficiency, which is heavily dictated by the weather.
+
+**Question 2: What was the most challenging part of deriving user stories from scenarios?**
+*Answer:* The challenge was ensuring the stories were "atomic" and didn't overlap too much. We had to break down the "Recommendation" epic into specific stories for weather, style preference, and usage frequency to make them actionable for development.

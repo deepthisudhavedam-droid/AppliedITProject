@@ -1,0 +1,5 @@
+**Manual vs. Automatic Tagging:**
+The group debated whether to allow users to manually tag every item or rely 100% on AI image recognition.
+- **Pros of AI:** Faster, better user experience for Maya (busy professional).
+- **Pros of Manual:** More accurate for niche styles (Jordan).
+- **Decision:** We chose a **Hybrid Model**. The AI provides "Best Guess" tags which the user can quickly confirm or edit. This balances speed with accuracy.
