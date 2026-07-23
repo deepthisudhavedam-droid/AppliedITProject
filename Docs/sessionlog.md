@@ -76,6 +76,43 @@ Today I have been working on a range of changes across the project.
 -Developed a task manager application using FASTAPI and React through an MVC architecture diagram.
 -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
 
+09-06-2026
+-Completed 1st exercise, did sprint with team and checked backlogs and started building authentication page
+-What I learned: PostgreSQL, how to use it in the project.
+
+11-06-2026
+-I am absent
+
+16-06-2026
+- Completed 2nd, 3rd, and 4th tasks in backend and learned PostgreSQL, with how to use it.
+
+18-06-2026 and 23-06-2026
+- I am absent
+
+25-06-2026
+-Started with 1st exercise and integrated authorisation in the backend. learned to add authentication and add password to our application.
+
+30-06-2026
+-Completed exercise 1,2,3 and 4. while completing these i learned authenticate using postman and connection to dbeaver.
+
+02-07-2026
+-Completely debugged and authenticated using jwt.io. I learned how to use this project.
+
+07-07-2026
+-testing exercise 2,3,4. i learned testing a application and how to use the project.
+
+09-07-2026
+-Today there were sprint presentations of two teams noghostjob and Local Event Finder.
+- I learned what need to be completed and updated my project regarding that.
+
+14-07-2026
+-Today I presented my sprint presentation with my team on A.I Outfit Finder and my other team A.I Wardrobe Assistant.
+-We have discussed our project and took insights from professor and other students.
+
+21-07-2026
+-I am absent.
+
+
 ## ****Rakshitha****
 
 ## **28-04-2026**
